@@ -1,0 +1,31 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "vm.telosys",
+	"scopeName": "source.telosys.vm",
+	"patterns": [
+		{ "include": "#comments" },
+		{ "include": "#entity" },
+		{ "include": "#variables" }
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+			  { "match": "##.+",
+				"name": "comment.line.double-slash.telosys.vm"
+			  }
+			]
+		},
+		"entity": {
+			"patterns": [{
+				"name": "keyword.control.telosys.vm",
+				"match": "(#assertFalse|#assertTrue|#break|#checkId|#define|#elseif|#else|#end|#error|#evaluate|#foreach|#if|#include|#macro|#parse|#set|#stop|#using)"
+			}]
+		},
+		"variables": {
+			"patterns": [{
+				"name": "string.meta.telosys.vm",
+				"match": "([$][a-zA-Z0-9_.-]+)|([$][{][a-zA-Z0-9_.-]+([}]|[a-zA-Z0-9_.-]+.+[}]))"
+			}]
+		}
+	}
+}

@@ -1,0 +1,240 @@
+{
+    "@AutoIncremented Annotation": {
+      "prefix": "@AutoIncremented",
+      "description": "@AutoIncremented Entity Annotation",
+      "body": [
+        "@AutoIncremented"
+        ]
+    },
+    "@Embedded Annotation": {
+        "prefix": "@Embedded",
+        "description": "@Embedded Entity Annotation",
+        "body": [
+          "@Embedded"
+          ]
+    },
+    "@Future Annotation": {
+        "prefix": "@Future",
+        "description": "@Future Entity Annotation",
+        "body": [
+          "@Future"
+          ]
+    },
+    "@Past Annotation": {
+        "prefix": "@Past",
+        "description": "@Past Entity Annotation",
+        "body": [
+          "@Past"
+          ]
+    },
+    "@Id Annotation": {
+        "prefix": "@Id",
+        "description": "@Id Entity Annotation",
+        "body": [
+          "@Id"
+          ]
+    },
+    "@LongText Annotation": {
+        "prefix": "@LongText",
+        "description": "@LongText Entity Annotation",
+        "body": [
+          "@LongText"
+          ]
+    },
+    "@Max() Annotation": {
+        "prefix": "@Max()",
+        "description": "@Max() Entity Annotation",
+        "body": [
+          "@Max()"
+          ]
+    },
+    "@Min() Annotation": {
+        "prefix": "@Min()",
+        "description": "@Min() Entity Annotation",
+        "body": [
+          "@Embedded"
+          ]
+    },
+    "@NotBlank Annotation": {
+        "prefix": "@NotBlank",
+        "description": "@NotBlank Entity Annotation",
+        "body": [
+          "@NotBlank"
+          ]
+    },
+    "@NotEmpty Annotation": {
+        "prefix": "@NotEmpty",
+        "description": "@NotEmpty Entity Annotation",
+        "body": [
+          "@NotEmpty"
+          ]
+    },
+    "@NotNull Annotation": {
+        "prefix": "@NotNull",
+        "description": "@NotNull Entity Annotation",
+        "body": [
+          "@NotNull"
+          ]
+    },
+    "@ObjectType Annotation": {
+        "prefix": "@ObjectType",
+        "description": "@ObjectType Entity Annotation",
+        "body": [
+          "@ObjectType"
+          ]
+    },
+    "@PrimitiveType Annotation": {
+        "prefix": "@PrimitiveType",
+        "description": "@PrimitiveType Entity Annotation",
+        "body": [
+          "@PrimitiveType"
+          ]
+    },
+    "@SizeMax() Annotation": {
+        "prefix": "@SizeMax()",
+        "description": "@SizeMax() Entity Annotation",
+        "body": [
+          "@SizeMax()"
+          ]
+    },
+    "@SizeMin() Annotation": {
+        "prefix": "@SizeMin()",
+        "description": "@SizeMin() Entity Annotation",
+        "body": [
+          "@SizeMin()"
+          ]
+    },
+    "@SqlType Annotation": {
+        "prefix": "@SqlType",
+        "description": "@SqlType Entity Annotation",
+        "body": [
+          "@SqlType"
+          ]
+    },
+    "@UnsignedType Annotation": {
+        "prefix": "@UnsignedType",
+        "description": "@UnsignedType Entity Annotation",
+        "body": [
+          "@UnsignedType"
+          ]
+    },
+    "string attribute": {
+        "prefix": "string",
+        "description": "string Entity Attribute",
+        "body": [
+          "string"
+          ]
+    },
+    "byte attribute": {
+        "prefix": "byte",
+        "description": "byte Entity Attribute",
+        "body": [
+          "byte"
+          ]
+    },
+    "short attribute": {
+        "prefix": "short",
+        "description": "short Entity Attribute",
+        "body": [
+          "short"
+          ]
+    },
+    "int attribute": {
+        "prefix": "int",
+        "description": "int Entity Attribute",
+        "body": [
+          "int"
+          ]
+    },
+    "long attribute": {
+        "prefix": "long",
+        "description": "long Entity Attribute",
+        "body": [
+          "long"
+          ]
+    },
+    "decimal attribute": {
+        "prefix": "decimal",
+        "description": "decimal Entity Attribute",
+        "body": [
+          "decimal"
+          ]
+    },
+    "float attribute": {
+        "prefix": "float",
+        "description": "float Entity Attribute",
+        "body": [
+          "float"
+          ]
+    },
+    "double attribute": {
+        "prefix": "double",
+        "description": "double Entity Attribute",
+        "body": [
+          "double"
+          ]
+    },
+    "smallint attribute": {
+        "prefix": "smallint",
+        "description": "smallint Entity Attribute",
+        "body": [
+          "smallint"
+          ]
+    },
+    "longvarchar attribute": {
+        "prefix": "longvarchar",
+        "description": "longvarchar Entity Attribute",
+        "body": [
+          "longvarchar"
+          ]
+    },
+    "varchar attribute": {
+        "prefix": "varchar",
+        "description": "varchar Entity Attribute",
+        "body": [
+          "varchar"
+          ]
+    },
+    "boolean attribute": {
+        "prefix": "boolean",
+        "description": "boolean Entity Attribute",
+        "body": [
+          "boolean"
+          ]
+    },
+    "date attribute": {
+        "prefix": "date",
+        "description": "date Entity Attribute",
+        "body": [
+          "date"
+          ]
+    },
+    "time attribute": {
+        "prefix": "time",
+        "description": "time Entity Attribute",
+        "body": [
+          "time"
+          ]
+    },
+    "timestamp attribute": {
+        "prefix": "timestamp",
+        "description": "timestamp Entity Attribute",
+        "body": [
+          "timestamp"
+          ]
+    },
+    "binary attribute": {
+        "prefix": "binary",
+        "description": "binary Entity Attribute",
+        "body": [
+          "binary"
+          ]
+    },
+    "longtext attribute": {
+        "prefix": "longtext",
+        "description": "longtext Entity Attribute",
+        "body": [
+          "longtext"
+          ]
+    }
+  }
