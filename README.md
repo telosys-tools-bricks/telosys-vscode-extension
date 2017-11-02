@@ -15,6 +15,10 @@ This package provides syntax coloration and auto-completion for :
 2. In the search box, write "telosys".  
 3. The Telosys plugin should appear, just click on "Install", wait for installation completion then hit "Reload" and you're done !  
 
+**ADDITIONAL** : If you want to use Telosys-CLI from VSCode :  
+1 - Install Telosys-CLI by following the instructions at [the Telosys-CLI repo](https://github.com/telosys-tools-bricks/telosys-cli)  
+2 - In Visual Studio Code, use the Ctrl+Maj+C keybinding to start a new console, then type "tt". Telosys-CLI will start at your project's folder.  
+
 ## License
 
 This package uses the [LGPL v3 License](https://www.gnu.org/licenses/lgpl-3.0.en.html) (See the LICENSE file in this repository).  
