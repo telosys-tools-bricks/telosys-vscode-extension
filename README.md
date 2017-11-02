@@ -18,6 +18,19 @@ This package provides syntax coloration and auto-completion for :
 **ADDITIONAL** : If you want to use Telosys-CLI from VSCode :  
 1 - Install Telosys-CLI by following the instructions at [the Telosys-CLI repo](https://github.com/telosys-tools-bricks/telosys-cli)  
 2 - In Visual Studio Code, use the Ctrl+Maj+C keybinding to start a new console, then type "tt". Telosys-CLI will start at your project's folder.  
+  
+-- OR --  
+For an advanced integration of Telosys-CLI :  
+1 - Install Telosys-CLI by following the instructions at [the Telosys-CLI repo](https://github.com/telosys-tools-bricks/telosys-cli)  
+2 - Install the VSCode Extension [Open in User Defined Console](https://marketplace.visualstudio.com/items?itemName=vilicvane.console) and set the following configuration :  
+```  
+Example for windows :
+{
+    "console.executable": "cmd.exe",
+    "console.args": ""/C start tt -h {dirname}""
+}
+```  
+4 - Use the keybinding of the extension (Ctrl/Cmd+Shift+C) to open Telosys-CLI in your working directory with the path automatically set.
 
 ## License
 
