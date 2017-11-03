@@ -3,7 +3,7 @@
     "displayName": "telosys",
     "description": "Telosys templates, DSL models and configuration files support for Visual Code",
     "version": "0.0.1",
-    "publisher": "Telosys",
+    "publisher": "telosysteam",
     "engines": {
         "vscode": "^1.17.0"
     },
