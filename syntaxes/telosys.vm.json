@@ -3,6 +3,7 @@
 	"name": "vm.telosys",
 	"scopeName": "source.telosys.vm",
 	"patterns": [
+		{ "include": "#functions" },
 		{ "include": "#comments" },
 		{ "include": "#entity" },
 		{ "include": "#variables" }
@@ -23,8 +24,15 @@
 		},
 		"variables": {
 			"patterns": [{
-				"name": "string.meta.telosys.vm",
-				"match": "([$][a-zA-Z0-9_.-]+)|([$][{][a-zA-Z0-9_.-]+([}]|[a-zA-Z0-9_.-]+.+[}]))"
+				"captures": {
+					"1": { "name": "string.meta.telosys.vm" },
+					"2": { "name": "string.meta.telosys.vm" },
+					"4": { "name": "string.meta.telosys.vm" },
+					"5": { "name": "string.meta.telosys.vm" },
+        			"3": { "name": "storage.type.function.vm" },
+        			"7": { "name": "storage.type.function.vm" }
+				},
+				"match": "([$][a-zA-Z0-9-_.]+|[$][{][a-zA-Z0-9-_.]+[}])|([$][{][a-zA-Z0-9-_]+[.])+([a-zA-Z0-9-_]+)([(][a-zA-Z0-9-_$]+)([|.][a-zA-Z0-9-_]+[)][}]|[.]([a-zA-Z0-9-_]+)[(]+[a-zA-Z0-9-_$]+[|.]([a-zA-Z0-9-_$]+)[)|(][)|$a-zA-Z0-9-_.]+[}]|[)][}])"
 			}]
 		}
 	}
