@@ -39,4 +39,4 @@ This package uses the [LGPL v3 License](https://www.gnu.org/licenses/lgpl-3.0.en
 ## Credits
 
 - Made by [Romuald Tuffreau](https://github.com/romwaldtff).  
-- [Laurent Guerin](https://github.com/l-gu) for Telosys and Telosys-CLI.
+- [Laurent Guerin](https://github.com/l-gu) for [Telosys](http://telosys.org/) and [Telosys-CLI](https://github.com/telosys-tools-bricks/telosys-cli).
