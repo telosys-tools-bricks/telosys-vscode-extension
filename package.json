@@ -6,7 +6,12 @@
     "publisher": "telosysteam",
     "engines": {
         "vscode": "^1.17.0"
+    },    
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/telosys-tools-bricks/telosys-editor-vscode-extension.git"
     },
+    "icon": "img/telosysIcon.png",
     "categories": [
         "Languages",
         "Snippets"
