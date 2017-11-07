@@ -25,14 +25,14 @@
 		"variables": {
 			"patterns": [{
 				"captures": {
-					"1": { "name": "string.meta.telosys.vm" },
-					"2": { "name": "string.meta.telosys.vm" },
-					"4": { "name": "string.meta.telosys.vm" },
-					"5": { "name": "string.meta.telosys.vm" },
-        			"3": { "name": "storage.type.function.vm" },
-        			"7": { "name": "storage.type.function.vm" }
+				"0": { "name": "string.meta.telosys.vm" },
+				"2": { "name": "string.meta.telosys.vm" },
+				"3": { "name": "string.meta.telosys.vm" },
+				"4": { "name": "string.meta.telosys.vm" },
+        			"5": { "name": "string.meta.telosys.vm" },
+        			"1": { "name": "storage.type.function.vm" }
 				},
-				"match": "([$][a-zA-Z0-9-_.]+|[$][{][a-zA-Z0-9-_.]+[}])|([$][{][a-zA-Z0-9-_]+[.])+([a-zA-Z0-9-_]+)([(][a-zA-Z0-9-_$]+)([|.][a-zA-Z0-9-_]+[)][}]|[.]([a-zA-Z0-9-_]+)[(]+[a-zA-Z0-9-_$]+[|.]([a-zA-Z0-9-_$]+)[)|(][)|$a-zA-Z0-9-_.]+[}]|[)][}])"
+				"match": "[$][{a-zA-Z0-9-_]+[.]([a-zA-Z0-9-_]+)[(]|([$][a-zA-Z0-9-_]+)|([$]{[a-zA-Z0-9-_.]+})|([$]{[a-zA-Z0-9-_.]+[ ]})|([.][a-zA-Z0-9-_]+[)|}]+)"
 			}]
 		}
 	}
