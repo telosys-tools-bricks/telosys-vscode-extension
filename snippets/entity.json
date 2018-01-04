@@ -118,25 +118,53 @@
           "@UnsignedType"
           ]
     },
-    "string attribute": {
-        "prefix": "string",
-        "description": "string Entity Attribute",
+    "binary attribute": {
+        "prefix": "binary",
+        "description": "binary Entity Attribute",
         "body": [
-          "string"
+          "binary"
+          ]
+    },
+    "boolean attribute": {
+        "prefix": "boolean",
+        "description": "boolean Entity Attribute",
+        "body": [
+          "boolean"
           ]
     },
     "byte attribute": {
-        "prefix": "byte",
-        "description": "byte Entity Attribute",
+      "prefix": "byte",
+      "description": "byte Entity Attribute",
+      "body": [
+        "byte"
+        ]
+  },
+    "date attribute": {
+        "prefix": "date",
+        "description": "date Entity Attribute",
         "body": [
-          "byte"
+          "date"
           ]
     },
-    "short attribute": {
-        "prefix": "short",
-        "description": "short Entity Attribute",
+    "decimal attribute": {
+        "prefix": "decimal",
+        "description": "decimal Entity Attribute",
         "body": [
-          "short"
+          "decimal"
+          ]
+    },
+    "double attribute": {
+        "prefix": "double",
+        "description": "double Entity Attribute",
+        "body": [
+          "double"
+          ]
+    },
+    "float attribute": {
+        "prefix": "float",
+        "description": "float Entity Attribute",
+        "body": [
+          "float"
           ]
     },
     "int attribute": {
@@ -153,60 +181,18 @@
           "long"
           ]
     },
-    "decimal attribute": {
-        "prefix": "decimal",
-        "description": "decimal Entity Attribute",
+    "short attribute": {
+        "prefix": "short",
+        "description": "short Entity Attribute",
         "body": [
-          "decimal"
+          "short"
           ]
     },
-    "float attribute": {
-        "prefix": "float",
-        "description": "float Entity Attribute",
+    "string attribute": {
+        "prefix": "string",
+        "description": "string Entity Attribute",
         "body": [
-          "float"
-          ]
-    },
-    "double attribute": {
-        "prefix": "double",
-        "description": "double Entity Attribute",
-        "body": [
-          "double"
-          ]
-    },
-    "smallint attribute": {
-        "prefix": "smallint",
-        "description": "smallint Entity Attribute",
-        "body": [
-          "smallint"
-          ]
-    },
-    "longvarchar attribute": {
-        "prefix": "longvarchar",
-        "description": "longvarchar Entity Attribute",
-        "body": [
-          "longvarchar"
-          ]
-    },
-    "varchar attribute": {
-        "prefix": "varchar",
-        "description": "varchar Entity Attribute",
-        "body": [
-          "varchar"
-          ]
-    },
-    "boolean attribute": {
-        "prefix": "boolean",
-        "description": "boolean Entity Attribute",
-        "body": [
-          "boolean"
-          ]
-    },
-    "date attribute": {
-        "prefix": "date",
-        "description": "date Entity Attribute",
-        "body": [
-          "date"
+          "string"
           ]
     },
     "time attribute": {
@@ -221,20 +207,6 @@
         "description": "timestamp Entity Attribute",
         "body": [
           "timestamp"
-          ]
-    },
-    "binary attribute": {
-        "prefix": "binary",
-        "description": "binary Entity Attribute",
-        "body": [
-          "binary"
-          ]
-    },
-    "longtext attribute": {
-        "prefix": "longtext",
-        "description": "longtext Entity Attribute",
-        "body": [
-          "longtext"
           ]
     }
   }
