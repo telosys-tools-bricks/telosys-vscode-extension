@@ -1,96 +1,96 @@
 {
-  "@Abstract entity Annotation": {
+  "@Abstract Entity Annotation": {
     "prefix": ["abs", "@Abstract"],
     "description": "Marks an entity as \"abstract\"",
     "body": [
       "@Abstract"
     ]
   },
-  "@AggregateRoot entity Annotation": {
+  "@AggregateRoot Entity Annotation": {
     "prefix": ["agg", "@AggregateRoot"],
     "description": "Marks an entity as \"aggregate root\" (useful to define \"DDD aggregates\" )",
     "body": [
       "@AggregateRoot"
     ]
   },
-  "@Context() entity Annotation": {
+  "@Context() Entity Annotation": {
     "prefix": ["cont", "@Context()"],
     "description": "Defines the context to which the entity belongs",
     "body": [
       "@Context(\"$1\")"
     ]
   },
-  "@DbCatalog() entity Annotation": {
+  "@DbCatalog() Entity Annotation": {
     "prefix": ["dbca", "@DbCatalog()"],
     "description": "Defines the database catalog to which the entity table belongs",
     "body": [
       "@DbCatalog(\"$1\")"
     ]
   },
-  "@DbComment() attribute & entity Annotation": {
+  "@DbComment() attribute & Entity Annotation": {
     "prefix": ["dbco","@DbComment()"],
     "description": "The comment in the database (typically a column comment or table comment in a relational database)",
     "body": [
       "@DbComment(\"$1\")"
     ]
   },
-  "@DbSchema() entity Annotation": {
+  "@DbSchema() Entity Annotation": {
     "prefix": ["dbsc", "@DbSchema()"],
     "description": "Defines the database schema to which the entity table belongs",
     "body": [
       "@DbSchema(\"$1\")"
     ]
   },
-  "@DbTable() entity Annotation": {
+  "@DbTable() Entity Annotation": {
     "prefix": ["dbt", "@DbTable()"],
     "description": "Defines the database table associated with the entity",
     "body": [
       "@DbTable(\"$1\")"
     ]
   },
-  "@DbTablespace() entity Annotation": {
+  "@DbTablespace() Entity Annotation": {
     "prefix": ["dbts", "@DbTablespace()"],
     "description": "Defines the database tablespace where the entity table is located",
     "body": [
       "@DbTablespace(\"$1\")"
     ]
   },
-  "@DbView entity Annotation": {
+  "@DbView Entity Annotation": {
     "prefix": ["dbv", "@DbView"],
     "description": "Marks the entity as a \"view\" in the database",
     "body": [
       "@DbView"
     ]
   },
-  "@Domain() entity Annotation": {
+  "@Domain() Entity Annotation": {
     "prefix": ["dom", "@Domain()"],
     "description": "Defines the \"domain\" to which the entity belongs",
     "body": [
       "@Domain(\"$1\")"
     ]
   },
-  "@Extends() entity Annotation": {
+  "@Extends() Entity Annotation": {
     "prefix": ["ext", "@Extends()"],
     "description": "Defines the \"superclass\" of an entity (inheritance)",
     "body": [
       "@Extends(\"$1\")"
     ]
   },
-  "@InMemoryRepository entity Annotation": {
+  "@InMemoryRepository Entity Annotation": {
     "prefix": ["inm", "@InMemoryRepository"],
     "description": "Marks an entity as fully stored in memory. All occurrences can be accessed directly in memory (can be useful for static datasets).",
     "body": [
       "@InMemoryRepository"
     ]
   },
-  "@Package() entity Annotation": {
+  "@Package() Entity Annotation": {
     "prefix": ["pack", "@Package()"],
     "description": "Defines the \"package\" to which the entity belongs",
     "body": [
       "@Package(\"$1\")"
     ]
   },
-  "@ReadOnly entity Annotation": {
+  "@ReadOnly Entity Annotation": {
     "prefix": ["rea", "@ReadOnly"],
     "description": "Marks the entity as \"readonly\"",
     "body": [
