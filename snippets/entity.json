@@ -1,212 +1,100 @@
 {
-    "@AutoIncremented Annotation": {
-      "prefix": "@AutoIncremented",
-      "description": "@AutoIncremented Entity Annotation",
-      "body": [
-        "@AutoIncremented"
-        ]
-    },
-    "@Embedded Annotation": {
-        "prefix": "@Embedded",
-        "description": "@Embedded Entity Annotation",
-        "body": [
-          "@Embedded"
-          ]
-    },
-    "@Future Annotation": {
-        "prefix": "@Future",
-        "description": "@Future Entity Annotation",
-        "body": [
-          "@Future"
-          ]
-    },
-    "@Past Annotation": {
-        "prefix": "@Past",
-        "description": "@Past Entity Annotation",
-        "body": [
-          "@Past"
-          ]
-    },
-    "@Id Annotation": {
-        "prefix": "@Id",
-        "description": "@Id Entity Annotation",
-        "body": [
-          "@Id"
-          ]
-    },
-    "@LongText Annotation": {
-        "prefix": "@LongText",
-        "description": "@LongText Entity Annotation",
-        "body": [
-          "@LongText"
-          ]
-    },
-    "@Max() Annotation": {
-        "prefix": "@Max()",
-        "description": "@Max() Entity Annotation",
-        "body": [
-          "@Max()"
-          ]
-    },
-    "@Min() Annotation": {
-        "prefix": "@Min()",
-        "description": "@Min() Entity Annotation",
-        "body": [
-          "@Embedded"
-          ]
-    },
-    "@NotBlank Annotation": {
-        "prefix": "@NotBlank",
-        "description": "@NotBlank Entity Annotation",
-        "body": [
-          "@NotBlank"
-          ]
-    },
-    "@NotEmpty Annotation": {
-        "prefix": "@NotEmpty",
-        "description": "@NotEmpty Entity Annotation",
-        "body": [
-          "@NotEmpty"
-          ]
-    },
-    "@NotNull Annotation": {
-        "prefix": "@NotNull",
-        "description": "@NotNull Entity Annotation",
-        "body": [
-          "@NotNull"
-          ]
-    },
-    "@ObjectType Annotation": {
-        "prefix": "@ObjectType",
-        "description": "@ObjectType Entity Annotation",
-        "body": [
-          "@ObjectType"
-          ]
-    },
-    "@PrimitiveType Annotation": {
-        "prefix": "@PrimitiveType",
-        "description": "@PrimitiveType Entity Annotation",
-        "body": [
-          "@PrimitiveType"
-          ]
-    },
-    "@SizeMax() Annotation": {
-        "prefix": "@SizeMax()",
-        "description": "@SizeMax() Entity Annotation",
-        "body": [
-          "@SizeMax()"
-          ]
-    },
-    "@SizeMin() Annotation": {
-        "prefix": "@SizeMin()",
-        "description": "@SizeMin() Entity Annotation",
-        "body": [
-          "@SizeMin()"
-          ]
-    },
-    "@SqlType Annotation": {
-        "prefix": "@SqlType",
-        "description": "@SqlType Entity Annotation",
-        "body": [
-          "@SqlType"
-          ]
-    },
-    "@UnsignedType Annotation": {
-        "prefix": "@UnsignedType",
-        "description": "@UnsignedType Entity Annotation",
-        "body": [
-          "@UnsignedType"
-          ]
-    },
-    "binary attribute": {
-        "prefix": "binary",
-        "description": "binary Entity Attribute",
-        "body": [
-          "binary"
-          ]
-    },
-    "boolean attribute": {
-        "prefix": "boolean",
-        "description": "boolean Entity Attribute",
-        "body": [
-          "boolean"
-          ]
-    },
-    "byte attribute": {
-      "prefix": "byte",
-      "description": "byte Entity Attribute",
-      "body": [
-        "byte"
-        ]
+  "@Abstract Entity Annotation": {
+    "prefix": ["abs", "@Abstract"],
+    "description": "Marks an entity as \"abstract\"",
+    "body": [
+      "@Abstract"
+    ]
   },
-    "date attribute": {
-        "prefix": "date",
-        "description": "date Entity Attribute",
-        "body": [
-          "date"
-          ]
-    },
-    "decimal attribute": {
-        "prefix": "decimal",
-        "description": "decimal Entity Attribute",
-        "body": [
-          "decimal"
-          ]
-    },
-    "double attribute": {
-        "prefix": "double",
-        "description": "double Entity Attribute",
-        "body": [
-          "double"
-          ]
-    },
-    "float attribute": {
-        "prefix": "float",
-        "description": "float Entity Attribute",
-        "body": [
-          "float"
-          ]
-    },
-    "int attribute": {
-        "prefix": "int",
-        "description": "int Entity Attribute",
-        "body": [
-          "int"
-          ]
-    },
-    "long attribute": {
-        "prefix": "long",
-        "description": "long Entity Attribute",
-        "body": [
-          "long"
-          ]
-    },
-    "short attribute": {
-        "prefix": "short",
-        "description": "short Entity Attribute",
-        "body": [
-          "short"
-          ]
-    },
-    "string attribute": {
-        "prefix": "string",
-        "description": "string Entity Attribute",
-        "body": [
-          "string"
-          ]
-    },
-    "time attribute": {
-        "prefix": "time",
-        "description": "time Entity Attribute",
-        "body": [
-          "time"
-          ]
-    },
-    "timestamp attribute": {
-        "prefix": "timestamp",
-        "description": "timestamp Entity Attribute",
-        "body": [
-          "timestamp"
-          ]
-    }
+  "@AggregateRoot Entity Annotation": {
+    "prefix": ["agg", "@AggregateRoot"],
+    "description": "Marks an entity as \"aggregate root\" (useful to define \"DDD aggregates\" )",
+    "body": [
+      "@AggregateRoot"
+    ]
+  },
+  "@Context() Entity Annotation": {
+    "prefix": ["cont", "@Context()"],
+    "description": "Defines the context to which the entity belongs",
+    "body": [
+      "@Context(\"$1\")"
+    ]
+  },
+  "@DbCatalog() Entity Annotation": {
+    "prefix": ["dbca", "@DbCatalog()"],
+    "description": "Defines the database catalog to which the entity table belongs",
+    "body": [
+      "@DbCatalog(\"$1\")"
+    ]
+  },
+  "@DbComment() attribute & Entity Annotation": {
+    "prefix": ["dbco","@DbComment()"],
+    "description": "The comment in the database (typically a column comment or table comment in a relational database)",
+    "body": [
+      "@DbComment(\"$1\")"
+    ]
+  },
+  "@DbSchema() Entity Annotation": {
+    "prefix": ["dbsc", "@DbSchema()"],
+    "description": "Defines the database schema to which the entity table belongs",
+    "body": [
+      "@DbSchema(\"$1\")"
+    ]
+  },
+  "@DbTable() Entity Annotation": {
+    "prefix": ["dbt", "@DbTable()"],
+    "description": "Defines the database table associated with the entity",
+    "body": [
+      "@DbTable(\"$1\")"
+    ]
+  },
+  "@DbTablespace() Entity Annotation": {
+    "prefix": ["dbts", "@DbTablespace()"],
+    "description": "Defines the database tablespace where the entity table is located",
+    "body": [
+      "@DbTablespace(\"$1\")"
+    ]
+  },
+  "@DbView Entity Annotation": {
+    "prefix": ["dbv", "@DbView"],
+    "description": "Marks the entity as a \"view\" in the database",
+    "body": [
+      "@DbView"
+    ]
+  },
+  "@Domain() Entity Annotation": {
+    "prefix": ["dom", "@Domain()"],
+    "description": "Defines the \"domain\" to which the entity belongs",
+    "body": [
+      "@Domain(\"$1\")"
+    ]
+  },
+  "@Extends() Entity Annotation": {
+    "prefix": ["ext", "@Extends()"],
+    "description": "Defines the \"superclass\" of an entity (inheritance)",
+    "body": [
+      "@Extends(\"$1\")"
+    ]
+  },
+  "@InMemoryRepository Entity Annotation": {
+    "prefix": ["inm", "@InMemoryRepository"],
+    "description": "Marks an entity as fully stored in memory. All occurrences can be accessed directly in memory (can be useful for static datasets).",
+    "body": [
+      "@InMemoryRepository"
+    ]
+  },
+  "@Package() Entity Annotation": {
+    "prefix": ["pack", "@Package()"],
+    "description": "Defines the \"package\" to which the entity belongs",
+    "body": [
+      "@Package(\"$1\")"
+    ]
+  },
+  "@ReadOnly Entity Annotation": {
+    "prefix": ["rea", "@ReadOnly"],
+    "description": "Marks the entity as \"readonly\"",
+    "body": [
+      "@ReadOnly"
+    ]
   }
+}

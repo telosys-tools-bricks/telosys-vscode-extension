@@ -1,0 +1,439 @@
+{
+  "@AutoIncremented Attribute Annotation": {
+    "prefix": [
+      "@AutoIncremented"
+    ],
+    "description": "",
+    "body": [
+      "@AutoIncremented"
+    ]
+  },
+  "@DbDefaultValue() Attribute Annotation": {
+    "prefix": [
+      "@DbDefaultValue()"
+    ],
+    "description": "The default value in the database.",
+    "body": [
+      "@DbDefaultValue(\"$1\")"
+    ]
+  },
+  "@DbName() Attribute Annotation": {
+    "prefix": [
+      "@DbName()"
+    ],
+    "description": "The name in the database (for example the column name in a relational database)",
+    "body": [
+      "@DbName(\"$1\")"
+    ]
+  },
+  "@DbSize() Attribute Annotation(Deprecated)": {
+    "prefix": [
+      "@DbSize()"
+    ],
+    "description": "Deprecated - Do not use",
+    "body": [
+      "@DbSize(\"$1\")"
+    ]
+  },
+  "@DbType() Attribute Annotation": {
+    "prefix": [
+      "@DbType()"
+    ],
+    "description": "The attribute type in the database (for example the column type in a relational database)",
+    "body": [
+      "@DbType(\"$1\")"
+    ]
+  },
+  "@DefaultValue() Attribute Annotation": {
+    "prefix": [
+      "@DefaultValue()"
+    ],
+    "description": "The default value for an attribute",
+    "body": [
+      "@DefaultValue(\"$1\")"
+    ]
+  },
+  "@Embedded Link Annotation": {
+    "prefix": [
+      "@Embedded"
+    ],
+    "description": "The entity referenced by the attribute must be embedded (typically for NoSQL databases).\nApplicable with \"references\" to embed them in the current entity.",
+    "body": [
+      "@Embedded"
+    ]
+  },
+  "@FetchTypeEager Link Annotation": {
+    "prefix": [
+      "@FetchTypeEager"
+    ],
+    "description": "Define an \"Eager Loading\" fetch type for a link, typically for ORM (JPA, Doctrine, etc ).",
+    "body": [
+      "@FetchTypeEager"
+    ]
+  },
+  "@FetchTypeLazy Link Annotation": {
+    "prefix": [
+      "@FetchTypeLazy"
+    ],
+    "description": "Define an \"Lazy Loading\" fetch type for a link, typically for ORM (JPA, Doctrine, etc ).",
+    "body": [
+      "@FetchTypeLazy"
+    ]
+  },
+  "@FK() Link Annotation": {
+    "prefix": [
+      "@FK()"
+    ],
+    "description": "Define a \"Foreign Key\" or a \"Foreign Key part\" ",
+    "body": [
+      "@FK($1)"
+    ]
+  },
+  "@GeneratedValue() Attribute Annotation": {
+    "prefix": "@GeneratedValue()",
+    "description": "Defines the generated value strategy (\"AUTO\", \"IDENTITY\", \"SEQUENCE\" or \"TABLE\") for an attribute.",
+    "body": [
+      "@GeneratedValue(${1|AUTO,IDENTITY,SEQUENCE,TABLE|})"
+    ]
+  },
+  "@Future Attribute Annotation": {
+    "prefix": "@Future",
+    "description": "The attribute date value must be in the future (after current date).\nUsable for field validation rules. Applicable with \"date\" type.",
+    "body": [
+      "@Future"
+    ]
+  },
+  "@Past Attribute Annotation": {
+    "prefix": "@Past",
+    "description": "The attribute value must be in the past (before current date).\nUsable for field validation rules. Applicable with \"date\" type.",
+    "body": [
+      "@Past"
+    ]
+  },
+  "@Id Attribute Annotation": {
+    "prefix": "@Id",
+    "description": "The attribute is the \"ID\" (or \"Primary Key\") for the current entity.\nFor an entity with a composite ID (composite Primary Key), put this annotation on each attribute that is part of the ID.",
+    "body": [
+      "@Id"
+    ]
+  },
+  "@InitialValue() Attribute Annotation": {
+    "prefix": [
+      "@InitialValue()"
+    ],
+    "description": "Sets the initial value of the attribute.",
+    "body": [
+      "@InitialValue(\"$1\")"
+    ]
+  },
+  "@InputType() Attribute Annotation": {
+    "prefix": [
+      "@InputType()"
+    ],
+    "description": "Defines the input type usable for a field (for example an HTML input type).",
+    "body": [
+      "@InputType(\"$1\")"
+    ]
+  },
+  "@Insertable() Link Annotation": {
+    "prefix": [
+      "@Insertable()"
+    ],
+    "description": "Defines if the link is \"insertable\" or not. ",
+    "body": [
+      "@Insertable(${1|true,false|})"
+    ]
+  },
+  "@Label() Attribute Annotation": {
+    "prefix": [
+      "@Label()"
+    ],
+    "description": "Defines the label usable for the field (for example an HTML label).",
+    "body": [
+      "@Label(\"$1\")"
+    ]
+  },
+  "@LinkByAttr() Link Annotation": {
+    "prefix": [
+      "@LinkByAttr()"
+    ],
+    "description": "Defines a link based on the given attribute(s) name(s) referencing the Primary Key.",
+    "body": [
+      "@LinkByAttr($1)"
+    ]
+  },
+  "@LinkByFK() Link Annotation": {
+    "prefix": [
+      "@LinkByFK()"
+    ],
+    "description": "Defines a link based on the given Foreign Key name.",
+    "body": [
+      "@LinkByFK(\"$1\")"
+    ]
+  },
+  "@LinkByJoinEntity() Link Annotation": {
+    "prefix": [
+      "@LinkByJoinEntity()"
+    ],
+    "description": "Defines a link based on the given \"join entity\" name.\nUsable with \"many to many\" links to define a \"join table\".",
+    "body": [
+      "@LinkByJoinEntity(\"$1\")"
+    ]
+  },
+  "@LongText Attribute Annotation": {
+    "prefix": "@LongText",
+    "description": "Marks the attribute as \"long text\" (for example a text with several lines).\nMarks the attribute as \"long text\" (for example a text with several lines).\nApplicable with \"string\" basic type.",
+    "body": [
+      "@LongText"
+    ]
+  },
+  "@ManyToMany Link Annotation": {
+    "prefix": "@ManyToMany",
+    "description": "Defines a \"many to many\" cardinality for a link.\nUsable for ORM code generation (JPA, etc)",
+    "body": [
+      "@ManyToMany"
+    ]
+  },
+  "@MappedBy() Link Annotation": {
+    "prefix": "@MappedBy()",
+    "description": "Defines the \"mappedBy\" attribute for a link.\nUsable for an \"inverse side\" relationship.",
+    "body": [
+      "@MappedBy($1)"
+    ]
+  },
+  "@Max() Attribute Annotation": {
+    "prefix": "@Max()",
+    "description": "To set the maximum acceptable value.\nUsable for field validation rules.\nApplicable with \"numeric\" types.",
+    "body": [
+      "@Max($1)"
+    ]
+  },
+  "@MaxLen() Attribute Annotation": {
+    "prefix": "@MaxLen()",
+    "description": "To set the maximum acceptable length.\nUsable for field validation rules and GUI fields definition.",
+    "body": [
+      "@MaxLen($1)"
+    ]
+  },
+  "@Min() Attribute Annotation": {
+    "prefix": "@Min()",
+    "description": "To set the minimum acceptable value.\nUsable for field validation rules.\nApplicable with \"numeric\" types.",
+    "body": [
+      "@Min($1)"
+    ]
+  },
+  "@NotBlank Attribute Annotation": {
+    "prefix": "@NotBlank",
+    "description": "The attribute value cannot be blank.\nUsable for field validation rules.",
+    "body": [
+      "@NotBlank"
+    ]
+  },
+  "@NotEmpty Attribute Annotation": {
+    "prefix": "@NotEmpty",
+    "description": "The attribute value cannot be empty.\nUsable for field validation rules.",
+    "body": [
+      "@NotEmpty"
+    ]
+  },
+  "@NotNull Attribute Annotation": {
+    "prefix": "@NotNull",
+    "description": "The attribute value cannot be null.\nUsable for field validation rules and SQL databases.",
+    "body": [
+      "@NotNull"
+    ]
+  },
+  "@ObjectType Attribute Annotation": {
+    "prefix": "@ObjectType",
+    "description": "The attribute type must be converted to \"object/wrapper type\" in the target language (for example for Java).",
+    "body": [
+      "@ObjectType"
+    ]
+  },
+  "@OneToOne Link Annotation": {
+    "prefix": "@OneToOne",
+    "description": "Defines a \"one to one\" cardinality for a link.\nUsable for ORM code generation (JPA, etc)",
+    "body": [
+      "@OneToOne"
+    ]
+  },
+  "@Optional Link Annotation": {
+    "prefix": "@Optional",
+    "description": "Defines an \"optional\" relationship for a link.\nUsable for ORM code generation (JPA, etc)",
+    "body": [
+      "@Optional"
+    ]
+  },
+  "@Pattern() Attribute Annotation": {
+    "prefix": [
+      "@Pattern()"
+    ],
+    "description": "Defines a pattern usable for field validation, for example a \"RegEx\" pattern.",
+    "body": [
+      "@Pattern(\"$1\")"
+    ]
+  },
+  "@PrimitiveType Attribute Annotation": {
+    "prefix": [
+      "@PrimitiveType"
+    ],
+    "description": "The attribute type must be converted to \"primitive type\" in the target language (for example for Java).",
+    "body": [
+      "@PrimitiveType"
+    ]
+  },
+  "@Size() Attribute Annotation": {
+    "prefix": [
+      "@Size()"
+    ],
+    "description": "Defines the attribute size.\nThe size is defined with \"precision\" and \"scale\" if necessary (eg \"6\" or \"6,2\")",
+    "body": [
+      "@Size($1)"
+    ]
+  },
+  "(deprecated) @SizeMax() Attribute Annotation": {
+    "prefix": [
+      "@SizeMax()"
+    ],
+    "description": "Deprecated - Do not use - Use \"@MaxLen\" instead",
+    "body": [
+      "@SizeMax($1)"
+    ]
+  },
+  "(deprecated) @SizeMin() Attribute Annotation": {
+    "prefix": [
+      "@SizeMin()"
+    ],
+    "description": "Deprecated - Do not use - Use \"@MinLen\" instead",
+    "body": [
+      "@SizeMin($1)"
+    ]
+  },
+  "@Transient Attribute Annotation": {
+    "prefix": [
+      "@Transient"
+    ],
+    "description": "Define an attribute as \"transient\" (for example in a Java class or with an ORM like JPA)",
+    "body": [
+      "@Transient"
+    ]
+  },
+  "@Unique Attribute Annotation": {
+    "prefix": [
+      "@Unique"
+    ],
+    "description": "Marks the attribute as unique for the entity.",
+    "body": [
+      "@Unique"
+    ]
+  },
+  "@UnsignedType Attribute Annotation": {
+    "prefix": [
+      "@UnsignedType"
+    ],
+    "description": "The attribute type must be converted to \"unsigned type\" in the target language (for example for C/C++).",
+    "body": [
+      "@UnsignedType"
+    ]
+  },
+  "@Updatable() Link Annotation": {
+    "prefix": [
+      "@Updatable()"
+    ],
+    "description": "Defines if the link is \"updatable\" or not. ",
+    "body": [
+      "@Updatable(${1|true,false|})"
+    ]
+  },
+  "binary attribute": {
+    "prefix": "binary",
+    "description": "binary Entity Attribute",
+    "body": [
+      "binary"
+      ]
+},
+"boolean attribute": {
+    "prefix": "boolean",
+    "description": "boolean Entity Attribute",
+    "body": [
+      "boolean"
+      ]
+},
+"byte attribute": {
+  "prefix": "byte",
+  "description": "byte Entity Attribute",
+  "body": [
+    "byte"
+    ]
+},
+"date attribute": {
+    "prefix": "date",
+    "description": "date Entity Attribute",
+    "body": [
+      "date"
+      ]
+},
+"decimal attribute": {
+    "prefix": "decimal",
+    "description": "decimal Entity Attribute",
+    "body": [
+      "decimal"
+      ]
+},
+"double attribute": {
+    "prefix": "double",
+    "description": "double Entity Attribute",
+    "body": [
+      "double"
+      ]
+},
+"float attribute": {
+    "prefix": "float",
+    "description": "float Entity Attribute",
+    "body": [
+      "float"
+      ]
+},
+"int attribute": {
+    "prefix": "int",
+    "description": "int Entity Attribute",
+    "body": [
+      "int"
+      ]
+},
+"long attribute": {
+    "prefix": "long",
+    "description": "long Entity Attribute",
+    "body": [
+      "long"
+      ]
+},
+"short attribute": {
+    "prefix": "short",
+    "description": "short Entity Attribute",
+    "body": [
+      "short"
+      ]
+},
+"string attribute": {
+    "prefix": "string",
+    "description": "string Entity Attribute",
+    "body": [
+      "string"
+      ]
+},
+"time attribute": {
+    "prefix": "time",
+    "description": "time Entity Attribute",
+    "body": [
+      "time"
+      ]
+},
+"timestamp attribute": {
+    "prefix": "timestamp",
+    "description": "timestamp Entity Attribute",
+    "body": [
+      "timestamp"
+      ]
+}
+}
