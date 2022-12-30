@@ -74,6 +74,10 @@
                 "path": "./snippets/entity.json"
             },
             {
+                "language": "entity.telosys",
+                "path": "./snippets/attribute.json"
+            },
+            {
                 "language": "vm.telosys",
                 "path": "./snippets/vm.json"
             }

@@ -1,0 +1,65 @@
+{
+  "@AutoIncremented attribute Annotation": {
+    "prefix": ["@AutoIncremented"],
+    "description": "",
+    "body": [
+      "@AutoIncremented $0"
+    ]
+  },
+  "@DbDefaultValue() attribute Annotation": {
+    "prefix": ["@DbDefaultValue()"],
+    "description": "The default value in the database.",
+    "body": [
+      "@DbDefaultValue(\"$1\") $0"
+    ]
+  },
+  "@DbName() attribute Annotation": {
+    "prefix": ["@DbName()"],
+    "description": "The name in the database (for example the column name in a relational database)",
+    "body": [
+      "@DbName(\"$1\") $0"
+    ]
+  },
+  "@DbSize() attribute Annotation(Deprecated)": {
+    "prefix": ["@DbSize()"],
+    "description": "Deprecated - Do not use",
+    "body": [
+      "@DbSize(\"$1\") $0"
+    ]
+  },
+  "@DbType() attribute Annotation": {
+    "prefix": ["@DbType()"],
+    "description": "The attribute type in the database (for example the column type in a relational database)",
+    "body": [
+      "@DbType(\"$1\") $0"
+    ]
+  },
+  "@DefaultValue() attribute Annotation": {
+    "prefix": ["@DefaultValue()"],
+    "description": "The default value for an attribute",
+    "body": [
+      "@DefaultValue(\"$1\") $0"
+    ]
+  },
+  "@Embedded link Annotation": {
+    "prefix": ["@Embedded"],
+    "description": "The entity referenced by the attribute must be embedded (typically for NoSQL databases).\nApplicable with \"references\" to embed them in the current entity.",
+    "body": [
+      "@Embedded $0"
+    ]
+  },
+  "@FetchTypeEager link Annotation": {
+    "prefix": ["@FetchTypeEager"],
+    "description": "Define an \"Eager Loading\" fetch type for a link, typically for ORM (JPA, Doctrine, etc ).",
+    "body": [
+      "@FetchTypeEager $0"
+    ]
+  },
+  "@FetchTypeLazy link Annotation": {
+    "prefix": ["@FetchTypeLazy"],
+    "description": "Define an \"Lazy Loading\" fetch type for a link, typically for ORM (JPA, Doctrine, etc ).",
+    "body": [
+      "@FetchTypeLazy $0"
+    ]
+  },
+}
