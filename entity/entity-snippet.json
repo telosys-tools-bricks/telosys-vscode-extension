@@ -1,0 +1,431 @@
+{
+  "binary": {
+      "prefix": "binary",
+      "body": "binary ",
+      "description": "binary (attribute type)"
+  },
+  "colon-binary": {
+      "prefix": [ ":binary", ": binary" ],
+      "body": ": binary ",
+      "description": "binary (attribute type)"
+  },
+
+  "boolean": {
+      "prefix": "boolean",
+      "body": "boolean ",
+      "description": "boolean (attribute type)"
+  },
+  "colon-boolean": {
+      "prefix": [ ":boolean", ": boolean" ],
+      "body": ": boolean ",
+      "description": "boolean (attribute type)"
+  },
+
+  "byte": {
+      "prefix": "byte",
+      "body": "byte ",
+      "description": "byte (attribute type)"
+  },
+  "colon-byte": {
+      "prefix": [ ":byte", ": byte" ],
+      "body": ": byte ",
+      "description": "byte (attribute type)"
+  },
+
+  "date": {
+      "prefix": "date",
+      "body": "date ",
+      "description": "date (attribute type)"
+  },
+  "colon-date": {
+      "prefix": [ ":date", ": date" ],
+      "body": ": date ",
+      "description": "date (attribute type)"
+  },
+
+  "decimal": {
+      "prefix": "decimal",
+      "body": "decimal ",
+      "description": "decimal (attribute type)"
+  },
+  "colon-decimal": {
+      "prefix": [ ":decimal", ": decimal" ],
+      "body": ": decimal ",
+      "description": "decimal (attribute type)"
+  },
+
+  "double": {
+      "prefix": "double",
+      "body": "double ",
+      "description": "double (attribute type)"
+  },
+  "colon-double": {
+      "prefix": [ ":double", ": double" ],
+      "body": ": double ",
+      "description": "double (attribute type)"
+  },
+
+  "float": {
+      "prefix": "float",
+      "body": "float ",
+      "description": "float (attribute type)"
+  },
+  "colon-float": {
+      "prefix": [ ":float", ": float" ],
+      "body": ": float ",
+      "description": "float (attribute type)"
+  },
+
+  "int": {
+      "prefix": "int",
+      "body": "int ",
+      "description": "int (attribute type)"
+  },
+  "colon-int": {
+      "prefix": [ ":int", ": int" ],
+      "body": ": int ",
+      "description": "int (attribute type)"
+  },
+
+  "long": {
+      "prefix": "long",
+      "body": "long ",
+      "description": "long (attribute type)"
+  },
+  "colon-long": {
+      "prefix": [ ":long", ": long" ],
+      "body": ": long ",
+      "description": "long (attribute type)"
+  },
+
+  "short": {
+      "prefix": "short",
+      "body": "short ",
+      "description": "short (attribute type)"
+  },
+  "colon-short": {
+      "prefix": [ ":short", ": short" ],
+      "body": ": short ",
+      "description": "short (attribute type)"
+  },
+
+  "string": {
+      "prefix": "string",
+      "body": "string ",
+      "description": "string (attribute type)"
+  },
+ "colon-string": {
+      "prefix": [ ":string", ": string" ],
+      "body": ": string ",
+      "description": "string (attribute type)"
+  },
+
+  "time": {
+      "prefix": "time",
+      "body": "time ",
+      "description": "time (attribute type)"
+  },
+  "colon-time": {
+      "prefix": [ ":time", ": time" ],
+      "body": ": time ",
+      "description": "time (attribute type)"
+  },
+
+  "timestamp": {
+      "prefix": "timestamp",
+      "body": "timestamp ",
+      "description": "timestamp (attribute type)"
+  },
+  "colon-timestamp": {
+      "prefix": [ ":timestamp", ": timestamp" ],
+      "body": ": timestamp ",
+      "description": "timestamp (attribute type)"
+  },
+
+
+  "@Abstract [entity]": {
+    "prefix": [ "abstract", "@Abstract" ],
+    "body": "@Abstract ",
+    "description": "@Abstract (entity annotation)\n"
+  },
+  "@AggregateRoot [entity]": {
+      "prefix": [ "aggregateRoot", "@AggregateRoot" ],
+      "body": "@AggregateRoot ",
+      "description": "@AggregateRoot (entity annotation)\n"
+  },
+  "@AutoIncremented [attribute]": {
+      "prefix": [ "autoIncremented", "@AutoIncremented" ],
+      "body": "@AutoIncremented ",
+      "description": "@AutoIncremented (attribute annotation)\n"
+  },
+  "@Cascade [link]": {
+      "prefix": [ "cascade", "@Cascade" ],
+      "body": "@Cascade(${1|ALL,MERGE,PERSIST,REFRESH,REMOVE|}) $0",
+      "description": "@Cascade(ALL)\n@Cascade(MERGE,PERSIST,REFRESH,REMOVE)\n" 
+  },
+  "@Context [entity]" : {
+    "prefix": [ "context", "@Context" ],
+    "body": "@Context($1) $0",
+    "description": "@Context(context-name)\n" 
+  },
+  "@DbCatalog [entity]" : {
+    "prefix": [ "dbcatalog", "@DbCatalog" ],
+    "body": "@DbCatalog($1) $0",
+    "description": "@DbCatalog(catalog-name)\n" 
+  },
+  "@DbComment [entity+attribute]" : {
+    "prefix": [ "dbcomment", "@DbComment" ],
+    "body": "@DbComment($1) $0",
+    "description": "@DbComment(comment)\n" 
+  },
+  "@DbDefaultValue [attribute]" : {
+    "prefix": [ "dbdefaultvalue", "@DbDefaultValue" ],
+    "body": "@DbDefaultValue($1) $0",
+    "description": "@DbDefaultValue(value)\n" 
+  },
+  "@DbName [attribute]" : {
+    "prefix": [ "dbname", "@DbName" ],
+    "body": "@DbName($1) $0",
+    "description": "@DbName(name)\n" 
+  },
+  "@DbSchema [entity]" : {
+    "prefix": [ "dbschema", "@DbSchema" ],
+    "body": "@DbSchema($1) $0",
+    "description": "@DbSchema(schema-name)\n" 
+  },
+  "@DbTable [entity]" : {
+    "prefix": [ "dbtable", "@DbTable" ],
+    "body": "@DbTable($1) $0",
+    "description": "@DbTable(table-name)\n" 
+  },     
+  "@DbTablespace [entity]" : {
+    "prefix": [ "dbtablespace", "@DbTablespace" ],
+    "body": "@DbTablespace($1) $0",
+    "description": "@DbTablespace(table-name)\n" 
+  },
+  "@DbType [attribute]" : {
+    "prefix": [ "dbtype", "@DbType" ],
+    "body": "@DbType($1) $0",
+    "description": "@DbType(type)\n" 
+  },
+  "@DbView [entity]" : {
+    "prefix": [ "dbview", "@DbView" ],
+    "body": "@DbView ",
+    "description": "@DbView\n" 
+  },
+  "@DefaultValue [attribute]" : {
+    "prefix": [ "defaultvalue", "@DefaultValue" ],
+    "body": "@DefaultValue($1) $0",
+    "description": "@DefaultValue(value)\n" 
+  },
+  "@Domain [entity]" : {
+    "prefix": [ "domain", "@Domain" ],
+    "body": "@Domain($1) $0",
+    "description": "@Domain(domain-name)\n" 
+  },
+  "@Embedded [link]" : {
+    "prefix": [ "embedded", "@Embedded" ],
+    "body": "@Embedded ",
+    "description": "@Embedded \n" 
+  },
+  "@Extends [entity]" : {
+    "prefix": [ "extends", "@Extends" ],
+    "body": "@Extends($1) $0",
+    "description": "@Extends(entity-name) \n" 
+  },
+  "@FetchTypeEager [link]" : {
+    "prefix": [ "fetchtypeeager", "@FetchTypeEager" ],
+    "body": "@FetchTypeEager ",
+    "description": "@FetchTypeEager \n" 
+  },
+  "@FetchTypeLazy [link]" : {
+    "prefix": [ "fetchtypelazy", "@FetchTypeLazy" ],
+    "body": "@FetchTypeLazy ",
+    "description": "@FetchTypeLazy\n" 
+  },
+  "@FK [attribute]" : {
+    "prefix": [ "fk", "@FK" ],
+    "body": "@FK($1) $0",
+    "description": "@FK( [fk-name,] entity[.attribute] )\n" 
+  },
+  "@Future [attribute]" : {
+    "prefix": [ "future", "@Future" ],
+    "body": "@Future ",
+    "description": "@Future : date in the future \n" 
+  },
+  "@GeneratedValue [attribute]" : {
+    "prefix": [ "generatedvalue", "@GeneratedValue" ],
+    "body": "@GeneratedValue(${1|AUTO,IDENTITY,SEQUENCE,TABLE|}$0)",
+    "description": "@GeneratedValue(AUTO)\n@GeneratedValue(IDENTITY)\n@GeneratedValue(SEQUENCE[,..])\n@GeneratedValue(TABLE[,..])\n" 
+  },
+  "@Id [attribute]" : {
+    "prefix": [ "id", "@Id" ],
+    "body": "@Id ",
+    "description": "@Id : attribute is a unique id/PK \n" 
+  },
+  "@InitialValue [attribute]" : {
+    "prefix": [ "initialvalue", "@InitialValue" ],
+    "body": "@InitialValue($1) $0",
+    "description": "@InitialValue(value)\n" 
+  },
+  "@InMemoryRepository [entity]" : {
+    "prefix": [ "inmemoryrepository", "@InMemoryRepository" ],
+    "body": "@InMemoryRepository ",
+    "description": "@InMemoryRepository\n" 
+  },
+  "@InputType [attribute]" : {
+    "prefix": [ "inputtype", "@InputType" ],
+    "body": "@InputType($1) $0",
+    "description": "@InputType(type)\n" 
+  },
+  "@Insertable [link]": {
+    "prefix": [ "insertable", "@Insertable" ],
+    "body": "@Insertable(${1|true,false|}) $0",
+    "description": "@Insertable(true/false)\n" 
+  },
+  "@JoinEntity [entity]" : {
+    "prefix": [ "joinentity", "@JoinEntity" ],
+    "body": "@JoinEntity ",
+    "description": "@JoinEntity \n" 
+  },
+  "@Label [attribute]" : {
+    "prefix": [ "label", "@Label" ],
+    "body": "@Label($1) $0",
+    "description": "@Label(label)\n" 
+  },
+  "@LinkByAttr [link]": {
+    "prefix": [ "linkbyattr", "@LinkByAttr" ],
+    "body": "@LinkByAttr(${1}) $0",
+    "description": "@LinkByAttr(attrib1[,attrib2,..])\n" 
+  },
+  "@LinkByFK [link]": {
+    "prefix": [ "linkbyfk", "@LinkByFK" ],
+    "body": "@LinkByFK(${1}) $0",
+    "description": "@LinkByFK(fk-name)\n" 
+  },
+  "@LinkByJoinEntity [link]": {
+    "prefix": [ "linkbyjoinentity", "@LinkByJoinEntity" ],
+    "body": "@LinkByJoinEntity(${1}) $0",
+    "description": "@LinkByJoinEntity(join-entity)\n" 
+  },
+  "@LongText [attribute]" : {
+    "prefix": [ "LongText", "@LongText" ],
+    "body": "@LongText ",
+    "description": "@LongText : attribute is a long text \n" 
+  },
+  "@ManyToMany  [link]": {
+    "prefix": [ "manytomany", "@ManyToMany" ],
+    "body": "@ManyToMany ",
+    "description": "@ManyToMany\n" 
+  },
+  "@MappedBy [link]": {
+    "prefix": [ "mappedby", "@MappedBy" ],
+    "body": "@MappedBy(${1}) $0",
+    "description": "@MappedBy(field)\n" 
+  },
+  "@Max [attribute]" : {
+    "prefix": [ "max", "@Max" ],
+    "body": "@Max($1) $0",
+    "description": "@Max(max-value)\n" 
+  },
+  "@MaxLen [attribute]" : {
+    "prefix": [ "maxlen", "@MaxLen" ],
+    "body": "@MaxLen($1) $0",
+    "description": "@MaxLen(max-length)\n" 
+  },
+  "@Min [attribute]" : {
+    "prefix": [ "min", "@Min" ],
+    "body": "@Min($1) $0",
+    "description": "@Min(min-value)\n" 
+  },
+  "@MinLen [attribute]" : {
+    "prefix": [ "minlen", "@MinLen" ],
+    "body": "@MinLen($1) $0",
+    "description": "@MinLen(min-length)\n" 
+  },
+  "@NotBlank [attribute]" : {
+    "prefix": [ "notblank", "@NotBlank" ],
+    "body": "@NotBlank ",
+    "description": "@NotBlank : attribute must be not blank \n" 
+  },
+  "@NotEmpty [attribute]" : {
+    "prefix": [ "notempty", "@NotEmpty" ],
+    "body": "@NotEmpty ",
+    "description": "@NotEmpty : attribute must be not empty \n" 
+  },
+  "@NotNull [attribute]" : {
+    "prefix": [ "notnull", "@NotNull" ],
+    "body": "@NotNull ",
+    "description": "@NotNull : attribute must be not null \n" 
+  },
+  "@ObjectType [attribute]" : {
+    "prefix": [ "objecttype", "@ObjectType" ],
+    "body": "@ObjectType ",
+    "description": "@ObjectType : force object type \n" 
+  },
+  "@OneToOne [link]": {
+    "prefix": [ "onetoone", "@OneToOne" ],
+    "body": "@OneToOne ",
+    "description": "@OneToOne \n" 
+  },
+  "@Optional [link]": {
+    "prefix": [ "optional", "@Optional" ],
+    "body": "@Optional ",
+    "description": "@Optional : optional relationship \n" 
+  },
+  "@OrphanRemoval [link]": {
+    "prefix": [ "orphanremoval", "@OrphanRemoval" ],
+    "body": "@OrphanRemoval ",
+    "description": "@OrphanRemoval \n" 
+  },
+  "@Package [entity]" : {
+    "prefix": [ "package", "@Package" ],
+    "body": "@Package($1) $0",
+    "description": "@Package(package-name) \n" 
+  },
+  "@Past [attribute]" : {
+    "prefix": [ "past", "@Past" ],
+    "body": "@Past ",
+    "description": "@Past : date in the past \n" 
+  },
+  "@Pattern [attribute]" : {
+    "prefix": [ "pattern", "@Pattern" ],
+    "body": "@Pattern($1) $0",
+    "description": "@Pattern(pattern)\n" 
+  },
+  "@PrimitiveType [attribute]" : {
+    "prefix": [ "primitivetype", "@PrimitiveType" ],
+    "body": "@PrimitiveType ",
+    "description": "@PrimitiveType : force primitive type \n" 
+  },
+  "@ReadOnly [entity]" : {
+    "prefix": [ "readonly", "@ReadOnly" ],
+    "body": "@ReadOnly ",
+    "description": "@ReadOnly \n" 
+  },
+  "@Size [attribute]" : {
+    "prefix": [ "size", "@Size" ],
+    "body": "@Size($1) $0",
+    "description": "@Size(precision[,scale])\n" 
+  },
+  "@Transient [attribute+link]" : {
+    "prefix": [ "transient", "@Transient" ],
+    "body": "@Transient ",
+    "description": "@Transient \n" 
+  },
+  "@Unique [attribute]" : {
+    "prefix": [ "unique", "@Unique" ],
+    "body": "@Unique ",
+    "description": "@Unique \n" 
+  },
+  "@UnsignedType [attribute]" : {
+    "prefix": [ "unsignedtype", "@UnsignedType" ],
+    "body": "@UnsignedType ",
+    "description": "@UnsignedType \n" 
+  },
+  "@Updatable [link]": {
+    "prefix": [ "updatable", "@Updatable" ],
+    "body": "@Updatable(${1|true,false|}) $0",
+    "description": "@Updatable(true/false)\n" 
+  }
+}

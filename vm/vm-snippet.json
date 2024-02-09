@@ -1,0 +1,171 @@
+{
+    "#assertFalse": {
+      "prefix": "#assertFalse",
+      "body": "#assertFalse($1, \"message\")",
+      "description": "#assertFalse(expr, message) \nTelosys directive\n"
+      },
+    "#assertTrue": {
+      "prefix": "#assertTrue",
+      "body": "#assertTrue($1, \"message\")",
+      "description": "#assertTrue(expr, message) \nTelosys directive\n"
+    },
+    "#break": {
+      "prefix": "#break",
+      "body": "#break",
+      "description": "#break \nVelocity directive\n"
+    },
+    "#cancel": {
+      "prefix": "#cancel",
+      "body": "#cancel(\"$1\")",
+      "description": "#cancel(message) \nCancels the current generation \nTelosys directive\n"
+    },
+    "#checkId": {
+      "prefix": "#checkId",
+      "body": "#checkId(\\$entity)",
+      "description": "#checkId($entity) \nTelosys directive\n"
+    },
+    "#define": {
+      "prefix": "#define",
+      "body": "#define(\\$$1) statement #end",
+      "description": "#define($ref) statement #end \nAssigns a block of VTL to a reference \nVelocity directive\n"
+    },
+    "#else": {
+      "prefix": "#else",
+      "body": "#else",
+      "description": "#else \nVelocity directive\n"
+    },
+    "#elseif": {
+      "prefix": "#elseif",
+      "body": "#elseif($1)",
+      "description": "#elseif(condition) \nVelocity directive\n"
+    },
+    "#end": {
+      "prefix": "#end",
+      "body": "#end",
+      "description": "#end \nEnd of if/else/elseif/foreach/macro \nVelocity directive\n"
+    },
+    "#error": {
+      "prefix": "#error",
+      "body": "#error(\"$1\")",
+      "description": "#error(message) \nTelosys directive\n"
+    },
+    "#evaluate": {
+      "prefix": "#evaluate",
+      "body": "#evaluate(\\$$1)",
+      "description": "#evaluate($ref) \nVelocity directive\n"
+    },
+
+    "#foreach": {
+      "prefix": "#foreach",
+      "body": [
+        "#foreach(\\$$1 in \\$$2)",
+        "$0",
+        "#end"
+        ],
+      "description": "#foreach($item in $collection) \nVelocity directive\n"
+    },
+    "foreach.count": {
+      "prefix": "$foreach.count",
+      "body": "\\$foreach.count",
+      "description": "$foreach.count \nforeach loop counter (1 to N) \nVelocity object\n"
+    },
+    "foreach.index": {
+      "prefix": "$foreach.index",
+      "body": "\\$foreach.index",
+      "description": "$foreach.index \nforeach loop index (0 to N) \nVelocity object\n"
+    },
+    "foreach.hasNext": {
+      "prefix": "$foreach.hasNext",
+      "body": "\\$foreach.hasNext",
+      "description": "$foreach.hasNext \ntrue if not last item \nVelocity object\n"
+    },
+    "#fea": {
+      "prefix": "#fea",
+      "body": [
+        "#foreach(\\$attr in \\$entity.attributes)",
+        "$0\\$attr",
+        "#end"
+        ],
+      "description": "'for each attribute' : \n#foreach($attr in $entity.attributes) \nVelocity directive\n"
+    },
+    "#fel": {
+      "prefix": "#fel",
+      "body": [
+        "#foreach(\\$link in \\$entity.links)",
+        "$0\\$link",
+        "#end"
+        ],
+      "description": "'for each link' : \n#foreach($link in $entity.links) \n#end \nVelocity directive\n"
+    },
+
+    "#if": {
+      "prefix": "#if",
+      "body": [
+        "#if($1)",
+        "$0",
+        "#end"
+        ],
+      "description": "#if(condition) \n#end \nVelocity directive\n"
+    },
+    "#ife": {
+      "prefix": "#ife",
+      "body": [
+        "#if($1)",
+        "$0",
+        "#else",
+        "",
+        "#end"
+        ],
+      "description": "#if(condition) \n#else \n#end \nVelocity directive\n"
+    },
+
+    "#include": {
+      "prefix": "#include",
+      "body": "#include(\"$1\")",
+      "description": "#include('filename') \nfile included 'as is', not parsed\nVelocity directive\n"
+    },
+
+    "#macro": {
+      "prefix": "#macro",
+      "body": [
+        "#macro($1)",
+        "$0",
+        "#end"
+      ],
+      "description": "#macro(macroname [ $arg1 $arg2 ...] ) \n#end \nVelocity directive\n"
+    },
+
+    "#parse": {
+      "prefix": "#parse",
+      "body": "#parse(\"$1.vm\")",
+      "description": "#parse('filename') \nVelocity directive\n"
+    },
+
+    "#set": {
+      "prefix": "#set",
+      "body": "#set(\\$$1 = $2)",
+      "description": "#set(\\$var = value) \nVelocity directive\n"
+    },
+    "#setlang": {
+      "prefix": "#setlang",
+      "body": "#set(\\$env.language = '$1')",
+      "description": "#set( $env.language = 'LanguageName' ) \nVelocity directive\n"
+    },
+    "#setdb": {
+      "prefix": "#setdb",
+      "body": "#set(\\$env.database = '$1')",
+      "description": "#set( $env.database = 'DbName' ) \nVelocity directive\n"
+    },
+
+    "#stop": {
+      "prefix": "#stop",
+      "body": "#stop",
+      "description": "#stop \nStops any further rendering and execution of the template \nVelocity directive\n"
+    },
+
+    "#using": {
+      "prefix": "#using",
+      "body": "#using(\"$1\")",
+      "description": "#using \n#using(\"var\") \n#using(\"var1\", \"var2\" ) \nTelosys directive\n"
+    }
+  }

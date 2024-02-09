@@ -1,0 +1,129 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "telosys.entity",
+	"scopeName": "source.telosys.entity",
+	"patterns": [
+		{ "include": "#comments" },
+		{ "include": "#literal-string" },
+		{ "include": "#entity-annotations" },
+		{ "include": "#tags" },
+		{ "include": "#entity-body" }
+	],
+	"repository": {
+
+		"comments": {
+			"patterns": [
+			  { "match": "(//).*",
+				"name": "comment.line.double-slash.telosys.entity"
+			  }
+			]
+		},
+
+		"literal-string": {
+			"begin": "\\\"",
+			"end": "\\\"",
+			"name": "string.quoted.double.telosys",
+			"patterns": [
+				{
+					"name": "constant.character.escape.telosys",
+					"match": "\\\\[\"\\\\]"
+				}
+			]			
+		},
+
+		"entity-body": {
+			"begin": "^[ \t]*([A-Za-z_0-9]*)[ \t]*{",
+			"end": "}",
+			"beginCaptures": {
+			  "1": { "name": "string.meta.telosys.entity" }
+			},
+			"endCaptures": {
+			  "0": { "name": "entity.body.close" }
+			},
+			"name": "entity.body",
+			"patterns": [
+				{ "include": "#comments" },
+				{ "include": "#attributes" },
+				{ "include": "#links" }
+			]
+		},
+
+		"attributes": {
+			"begin": ":[ \t]*(binary|boolean|byte|date|decimal|double|float|int|long|short|string|timestamp|time)\\b",
+			"end": ";",
+			"beginCaptures": { 
+				"1": { "name": "keyword.control.telosys.entity" } },
+			"endCaptures":   { 
+				"0": { "name": "entity.attribute.close" } },
+			"name": "entity.attribute",
+			"patterns": [
+				{ "include": "#comments" },
+				{ "include": "#literal-string" },
+				{ "include": "#attribute-annotations" },
+				{ "include": "#attribute-annotation-constants" },
+				{ "include": "#tags" }
+			]
+		},
+		
+		"links": {
+			"begin": ":[ \t]*([A-Za-z_0-9]*)",
+			"end": ";",
+			"beginCaptures": { 
+				"1": { "name": "string.meta.telosys.entity" } },
+			"endCaptures":   { 
+				"0": { "name": "entity.link.close" } },
+			"name": "entity.link",
+			"patterns": [
+				{ "include": "#comments" },
+				{ "include": "#literal-string" },
+				{ "include": "#link-annotations" },
+				{ "include": "#link-annotation-constants" },
+				{ "include": "#tags" }
+			]
+		},
+
+		"entity-annotations": {
+			"patterns": [{ 
+				"match": "(@Abstract|@AggregateRoot|@Context\\(|@DbCatalog\\(|@DbComment\\(|@DbSchema\\(|@DbTable\\(|@DbTablespace\\(|@DbView|@Domain\\(|@Extends\\(|@InMemoryRepository|@JoinEntity|@Label\\(|@Package\\()",
+				"name": "keyword.other.telosys.entity"
+			}]
+		},
+
+		"link-annotations": {
+			"patterns": [{ 
+				"match": "(@Cascade\\(|@Embedded|@FetchTypeEager|@FetchTypeLazy|@Insertable\\(|@LinkByAttr\\(|@LinkByFK\\(|@LinkByJoinEntity\\(|@ManyToMany|@MappedBy\\(|@OneToOne|@Optional|@OrphanRemoval|@Transient|@Updatable\\()",
+				"name": "keyword.other.telosys.entity"
+			}]
+		},
+		"link-annotation-constants": {
+			"patterns": [
+				{ "match": "\\b(true|false)\\b",
+				"name": "constant.character.telosys.entity" 
+				},		
+				{ "match": "\\b(ALL|MERGE|PERSIST|REFRESH|REMOVE)\\b",
+				"name": "constant.character.telosys.entity" 
+				}
+			]
+		},
+
+		"attribute-annotations": {
+			"patterns": [{ 
+				"match": "(@AutoIncremented|@DbComment\\(|@DbDefaultValue\\(|@DbName\\(|@DbType\\(|@DefaultValue\\(|@FK\\(|@Future|@GeneratedValue\\(|@Id|@InitialValue\\(|@InputType\\(|@Label\\(|@LongText|@Max\\(|@MaxLen\\(|@Min\\(|@MinLen\\(|@NotBlank|@NotEmpty|@NotNull|@ObjectType|@Optional|@Past|@Pattern\\(|@PrimitiveType|@ReadOnly|@Size\\(|@Transient|@Unique|@UnsignedType)",
+				"name": "keyword.other.telosys.entity"
+			}]
+		},
+		"attribute-annotation-constants": {
+			"patterns": [{ 
+				"match": "\\b(AUTO|IDENTITY|SEQUENCE|TABLE)\\b",
+				"name": "constant.character.telosys.entity" 
+			}]
+		},
+
+		"tags": {
+			"patterns": [{ 
+				"match": "#+\\w*",
+				"name": "keyword.other.unit.telosys.entity"
+			}]
+		}
+	}
+}

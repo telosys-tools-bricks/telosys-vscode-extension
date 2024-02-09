@@ -1,0 +1,645 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "vm.telosys",
+	"scopeName": "source.telosys.vm",
+	"patterns": [
+		{ "include": "#comments" },
+		{ "include": "#directives-parenthesis" },
+		{ "include": "#directives-simple" },
+		{ "include": "#foreach-var" },
+
+		{ "include": "#model-object" },
+		{ "include": "#entity-object" },
+		{ "include": "#attribute-object" },
+		{ "include": "#fkpart-object" },
+		{ "include": "#linkattribute-object" },
+		{ "include": "#link-object" },
+		{ "include": "#fkattribute-object" },
+		{ "include": "#fk-object" },
+		{ "include": "#reference-object" },
+
+		{ "include": "#env-object" },
+		{ "include": "#project-object" },
+		{ "include": "#target-object" },
+		{ "include": "#bundle-object" },
+		{ "include": "#generator-object" },
+		{ "include": "#fn-object" },
+		{ "include": "#factory-object" },
+		{ "include": "#file-object" },
+		{ "include": "#loader-object" },
+		{ "include": "#now-object" },
+		{ "include": "#values-object" },
+
+		{ "include": "#variables" }
+		
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"match": "##.+",
+					"name": "comment.line.number-sign.telosys.vm"
+				},
+				{
+					"begin": "#\\*",
+					"end": "\\*#",
+					"name": "comment.block.telosys.vm"
+				}
+			]
+		},
+		"directives-parenthesis": {
+			"patterns": [
+				{
+					"match": "(#assertFalse|#assertTrue|#cancel|#checkId|#define|#elseif|#error|#evaluate|#foreach|#if|#include|#macro|#parse|#set|#using) *\\(",
+					"captures": {
+						"1": { "name": "keyword.control.telosys.vm" }
+					}
+				}
+			]
+		},
+		"directives-simple": {
+			"patterns": [
+				{
+					"match": "(#break|#else|#end|#stop)",
+					"name": "keyword.control.telosys.vm"
+				}
+			]
+		},
+		"foreach-var": {
+			"patterns": [
+				{
+					"match": "(\\$foreach.parent.count|\\${foreach.parent.count}|\\$foreach.parent.index|\\${foreach.parent.index}|\\$foreach.parent.hasNext|\\${foreach.parent.hasNext})",
+					"name": "constant.numeric.telosys.vm"
+				},
+				{
+					"match": "(\\$foreach.topmost.count|\\${foreach.topmost.count}|\\$foreach.topmost.index|\\${foreach.topmost.index}|\\$foreach.topmost.hasNext|\\${foreach.topmost.hasNext})",
+					"name": "constant.numeric.telosys.vm"
+				},
+				{
+					"match": "(\\$foreach.count|\\${foreach.count}|\\$foreach.index|\\${foreach.index}|\\$foreach.hasNext|\\${foreach.hasNext}|\\$foreach.parent|\\${foreach.parent}|\\$foreach.topmost|\\${foreach.topmost})",
+					"name": "constant.numeric.telosys.vm"
+				}
+			]			
+		},
+
+		"model-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(model\\.)(allEntities|databaseId|databaseName|databaseType|description|folderName|name|numberOfEntities|title|type|version)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$)({?)(model\\.)(getEntityByClassName|getEntityByTableName|hasEntityWithClassName|hasEntityWithTableName)\\(",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$model)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${model})",
+					"name": "keyword.other.telosys.vm"
+				}
+			]
+		},
+		"entity-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(entity\\.)(attributesNamesAsString|getAttributeByColumnName|getAttributeByName|getAttributesByCriteria|hasAttribute|hasTag|keyAttributesNamesAsString|nonKeyAttributesNamesAsString|referencedEntityTypes|tagValueAsBoolean|tagValueAsInt|tagValue)\\(",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$)({?)(entity\\.)(hasAutoIncrementedKey|hasCollections|hasCompositePrimaryKey|hasContext|hasDatabaseCatalog|hasDatabaseComment|hasDatabaseSchema|hasDatabaseTable|hasDatabaseTablespace|hasDomain|hasForeignKeys|hasGeneratedKey|hasLinks|hasPrimaryKey|hasSuperClass|hasTextAttribute|isAbstract|isAggregateRoot|isDatabaseView|isInMemoryRepository|isJoinEntity|isReadOnly|isTableType|isViewType)\\(\\)",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$)({?)(entity\\.)(attributesCount|attributes|attributesNamesAsString|autoincrementedKeyAttribute|context|databaseCatalog|databaseComment|databaseForeignKeysCount|databaseForeignKeys|databaseSchema|databaseTablespace|databaseTable|databaseType|domain|fullName|keyAttributesCount|keyAttributes|keyAttribute|linksCount|links|name|nonKeyAttributesCount|nonKeyAttributes|nonTextAttributes|package|referencedEntitiesForAllLevels|referencedEntities|references|referencesInDepth|selectedLinks|sqlPrimaryKeyColumnsAsString|sqlPrimaryKeyColumns|sqlTableName|superClass|textAttributes)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$entity)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${entity})",
+					"name": "keyword.other.telosys.vm"
+				}
+			]
+		},
+		"attribute-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(attribute|attrib|attr)(\\.)(formattedName|formattedType|formattedWrapperType|hasGeneratedValueStrategy|hasTag|insertableIs|tagValueAsBoolean|tagValueAsInt|tagValue|updatableIs)\\(",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+				"match": "(\\$)({?)(attribute|attrib|attr)(\\.)(hasDatabaseComment|hasDatabaseDefaultValue|hasDatabaseName|hasDatabaseType|hasDateFutureValidation|hasDatePastValidation|hasDefaultValue|hasGeneratedValueAllocationSize|hasGeneratedValueInitialValue|hasGeneratedValueSequenceName|hasGeneratedValueTablePkValue|hasInitialValue|hasInputType|hasLabel|isAutoIncremented|isBinaryType|isBooleanType|isByteType|isDatabaseNotNull|isDateType|isDecimalType|isDoubleType|isFK|isFKComposite|isFKSimple|isFloatType|isGeneratedValue|isIntegerType|isKeyElement|isLongText|isLongType|isNotBlank|isNotEmpty|isNotNull|isNumberType|isPrimitiveType|isShortType|isStringType|isTemporalType|isTimeType|isTimestampType|isTransient|isUnique)\\(\\)",
+				"captures": {
+					"1": { "name": "keyword.other.telosys.vm" },
+					"3": { "name": "keyword.other.telosys.vm" },
+					"4": { "name": "keyword.other.telosys.vm" },
+					"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$)({?)(attribute|attrib|attr)(\\.)(databaseComment|databaseDefaultValue|databaseName|databaseSize|databaseType|defaultValue|entity|fkPartsCount|fkParts|fullType|generatedValueAllocationSize|generatedValueInitialValue|generatedValueSequenceName|generatedValueStrategy|generatedValueTablePkValue|getter|getterWithGetPrefix|initialValue|ini|inputType|insertable|label|maxLength|maxValue|minLength|minValue|name|neutralType|pattern|referencedEntityName|referencedEntity|setter|simpleType|sizeAsDecimal|size|sqlColumnConstraints|sqlColumnName|sqlColumnType|type|updatable|wrapperType)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$attribute|\\$attrib|\\$attr)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${attribute}|\\${attrib}|\\${attr})",
+					"name": "keyword.other.telosys.vm"
+				}
+			]
+		},
+		"fkpart-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(fkpart|fkPart)(\\.)(fkName|referencedAttributeName|referencedAttribute|referencedEntityName|referencedEntity)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$fkpart|\\$fkPart)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${fkpart}|\\${fkPart})",
+					"name": "keyword.other.telosys.vm"
+				}
+			]
+		},
+		"link-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(link)(\\.)(formattedFieldName|formattedFieldType|hasTag|insertableIs|tagValueAsBoolean|tagValueAsInt|tagValue|updatableIs|usesAttribute)\\(",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+				"match": "(\\$)({?)(link)(\\.)(hasAttributeInPrimaryKey|hasJoinEntity|hasMappedBy|isCardinalityManyToMany|isCardinalityManyToOne|isCardinalityOneToMany|isCardinalityOneToOne|isCardinalityToMany|isCardinalityToOne|isCascadeALL|isCascadeMERGE|isCascadePERSIST|isCascadeREFRESH|isCascadeREMOVE|isCollectionType|isEmbedded|isFetchDEFAULT|isFetchEAGER|isFetchLAZY|isOptionalFalse|isOptionalTrue|isOptionalUndefined|isOrphanRemoval|isOwningSide|isTransient)\\(\\)",
+				"captures": {
+					"1": { "name": "keyword.other.telosys.vm" },
+					"3": { "name": "keyword.other.telosys.vm" },
+					"4": { "name": "keyword.other.telosys.vm" },
+					"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$)({?)(link)(\\.)(attributesCount|attributes|cardinality|cascade|entity|fetch|fieldName|fieldType|getter|insertable|joinEntityName|joinEntity|mappedBy|optional|setter|targetEntityFullType|targetEntityName|targetEntitySimpleType|targetEntity|updatable)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$link)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${link})",
+					"name": "keyword.other.telosys.vm"
+				}
+			]
+		},
+		"linkattribute-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(linkAttribute|linkattribute|linkAttr|linkattr)(\\.)(linkName|originAttributeName|originAttribute|referencedAttributeName|referencedAttribute)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$linkAttribute|\\$linkattribute|\\$linkAttr|\\$linkattr)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${linkAttribute}|\\${linkattribute}|\\${linkAttr}|\\${linkattr})",
+					"name": "keyword.other.telosys.vm"
+				}
+			]
+		},
+		"fk-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(fk)(\\.)(isComposite|isExplicit)\\(\\)",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+						}
+				},
+				{
+					"match": "(\\$)({?)(fk)(\\.)(attributesCount|attributes|name|originEntityName|originEntity|referencedEntityName|referencedEntity|sqlName|sqlOriginColumnsAsString|sqlOriginColumns|sqlOriginTableName|sqlReferencedColumnsAsString|sqlReferencedColumns|sqlReferencedTableName)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$fk)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${fk})",
+					"name": "keyword.other.telosys.vm"
+				}
+			]
+		},
+		"fkattribute-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(fkAttribute|fkattribute|fkAttr|fkattr)(\\.)(foreignKeyName|ordinal|originAttributeName|originAttribute|referencedAttributeName|referencedAttribute)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$fkAttribute|\\$fkattribute|\\$fkAttr|\\$fkattr)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${fkAttribute}|\\${fkattribute}|\\${fkAttr}|\\${fkattr})",
+					"name": "keyword.other.telosys.vm"
+				}
+			]
+		},
+		"reference-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(reference|ref)(\\.)(entityName|entity|toManyCount|toMany|toOneCount|toOne|totalCount)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$reference|\\$ref)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${reference}|\\${ref})",
+					"name": "keyword.other.telosys.vm"
+				}
+			]
+		},
+
+		"env-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(env)(\\.)(collectionType|database|databaseConvFile|entityClassNamePrefix|entityClassNameSuffix|language|sql|typeWithNullableMark)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				}
+			]
+		},
+		"project-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(project)(\\.)(allVariables|locationFullPath|modelsFolderFullPath|specificVariables|templatesFolderFullPath)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				}
+			]
+		},
+		"target-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(target)(\\.)(forceEntityName|javaPackageFromFolder|outputFileExists)\\(",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$)({?)(target)(\\.)(entityName|file|folder|forcedEntityName|originalFileDefinition|originalFolderDefinition|outputFileFullPath|targetName|template|type)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				}
+			]
+		},
+		"bundle-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(bundle)(\\.)(name)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				}
+			]
+		},
+		"generator-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(generator)(\\.)(generate)\\(",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$)({?)(generator)(\\.)(name|version)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				}
+			]
+		},
+		"fn-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(fn)(\\.)(argumentsListWithGetter|argumentsListWithType|argumentsListWithWrapperType|argumentsList|backslash|buildIntValues|buildValues|capitalize|className|concatLists|escapeXml|fileFromBundle|fileFromModel|file|get|isBlank|isDefined|isNotBlank|isNotVoid|isVoid|join|joinWithPrefixSuffix|quote|replaceInList|size|tab|toList|toLowerCase|toUpperCase|trimAll|uncapitalize|unquote)\\(",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				}
+			]
+		},
+		"factory-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(factory)(\\.)(newBigDecimal|newBigInteger|newJdbc|newSql)\\(",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				}
+			]
+		},
+		"file-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(file)(\\.)(exists|isDirectory|isFile|isHidden|loadContent|loadLines)\\(\\)",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+						}
+				},
+				{
+					"match": "(\\$)({?)(file)(\\.)(loadContent|loadLines|loadValues)\\(",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$)({?)(file)(\\.)(absolutePath|canonicalPath|length|name|parent|path)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$file)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${file})",
+					"name": "keyword.other.telosys.vm"
+				}
+			]
+		},
+		"loader-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(loader)(\\.)(loadClass|newInstance)\\(",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$)({?)(loader)(\\.)(classesFolder|libFolder|uRLs)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				}
+			]
+		},
+		"now-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(now)(\\.)(format)\\(",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$)({?)(now)(\\.)(datetime|date|time)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				}
+			]
+		},
+		"values-object": {
+			"patterns": [
+				{
+					"match": "(\\$)({?)(values)(\\.)(size|toFormattedJSON|toJSON|toURI)\\(\\)",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+						}
+				},
+				{
+					"match": "(\\$)({?)(values)(\\.)(comparisonStatement|getValue|toFormattedJSON|toJSON|toURI)\\(",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$)({?)(values)(\\.)(allValues)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" },
+						"3": { "name": "keyword.other.telosys.vm" },
+						"4": { "name": "keyword.other.telosys.vm" },
+						"5": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$values)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${values})",
+					"name": "keyword.other.telosys.vm"
+				}
+			]
+		},
+
+
+		"variables": {
+			"patterns": [
+				{
+					"match": "(\\${\\w+\\.\\w+\\().*?(\\)})",
+					"captures": {
+						"1": { "name": "string.meta.telosys.vm" },
+						"2": { "name": "string.meta.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\$\\w+\\.\\w+\\().*?(\\))",
+					"captures": {
+						"1": { "name": "string.meta.telosys.vm" },
+						"2": { "name": "string.meta.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${\\w+\\.\\w+})",
+					"name": "string.meta.telosys.vm"
+				},
+				{
+					"match": "(\\$\\w+\\.\\w+)",
+					"name": "string.meta.telosys.vm"
+				},
+				{
+					"match": "(\\${\\w+})",
+					"name": "string.meta.telosys.vm"
+				},
+				{
+					"match": "(\\$\\w+)",
+					"name": "string.meta.telosys.vm"
+				}
+			]
+		},
+		"variables-old": {
+			"patterns": [{
+				"captures": {
+				"1": { "name": "string.meta.telosys.vm" },
+				"3": { "name": "string.meta.telosys.vm" },
+				"4": { "name": "string.meta.telosys.vm" },
+				"5": { "name": "string.meta.telosys.vm" },
+        		"6": { "name": "string.meta.telosys.vm" },
+        		"2": { "name": "storage.type.function.vm" }
+				},
+				"match": "([$][{a-zA-Z0-9-_]+[.]([a-zA-Z0-9-_]+))[(]|([$][a-zA-Z0-9-_]+[.][a-zA-Z0-9-_]+)[ |)]+([ |}])|([$][a-zA-Z0-9-_.]+)|([$]{[a-zA-Z0-9-_.]+})"
+			}]
+		}
+	}
+}
