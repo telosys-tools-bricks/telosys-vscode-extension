@@ -1,81 +1,56 @@
 {
     "name": "telosys",
-    "displayName": "telosys",
-    "description": "Telosys templates, DSL models and configuration files support for Visual Code",
-    "version": "2.2.0",
-    "publisher": "telosysteam",
+    "displayName": "Telosys",
+    "description": "VSCode extension for Telosys entities and templates",
+    "version": "4.1.0",
+    "publisher": "TelosysTeam",
     "engines": {
-        "vscode": "^1.17.0"
-    },    
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/telosys-tools-bricks/telosys-editor-vscode-extension.git"
-    },
+        "vscode": "^1.78.2"
+      },
     "icon": "img/telosysIcon.png",
     "categories": [
-        "Languages",
-        "Snippets"
+        "Programming Languages", "Snippets"
     ],
-    "keywords": [
-        "Telosys",
-        "Model",
-        "Entities",
-        "Cfg",
-        "Syntax"
-    ],
+    "keywords": [ "Telosys",
+        "Model", "Entities",
+        "Bundle", "Templates" ],
     "contributes": {
-        "languages": [{
-            "id": "entity.telosys",
-            "aliases": ["entity.telosys"],
-            "extensions": [".entity"],
-            "configuration": "./language-configuration.json"
-        },
-        {
-            "id": "vm.telosys",
-            "aliases": ["vm.telosys"],
-            "extensions": [".vm"],
-            "configuration": "./language-configuration.json"
-        },
-        {
-            "id": "templates.telosys",
-            "aliases": ["templates.telosys"],
-            "extensions": ["templates.cfg"],
-            "configuration": "./language-configuration.json"
-        },
-        {
-            "id": "commons.telosys",
-            "aliases": ["commons.telosys"],
-            "extensions": [".model", "telosys-tools.cfg"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "entity.telosys",
-            "scopeName": "source.telosys.entity",
-            "path": "./syntaxes/telosys.entity.json"
-        },
-        {
-            "language": "vm.telosys",
-            "scopeName": "source.telosys.vm",
-            "path": "./syntaxes/telosys.vm.json"
-        },
-        {
-            "language": "templates.telosys",
-            "scopeName": "source.telosys.templates",
-            "path": "./syntaxes/telosys.templates.json"
-        },
-        {
-            "language": "commons.telosys",
-            "scopeName": "source.telosys.commons",
-            "path": "./syntaxes/telosys.commons.json"
-        }],
-        "snippets": [
+        "languages": [ 
             {
-                "language": "entity.telosys",
-                "path": "./snippets/entity.json"
+                "id": "telosys.entity",
+                "aliases": ["telosys.entity"],
+                "extensions": [".entity"],
+                "configuration": "./entity/entity-configuration.json"
             },
             {
-                "language": "vm.telosys",
-                "path": "./snippets/vm.json"
+                "id": "telosys.vm",
+                "aliases": ["telosys.vm"],
+                "extensions": [".vm"],
+                "configuration": "./vm/vm-configuration.json"
+            } 
+        ],
+
+        "grammars": [ 
+            {
+                "language": "telosys.entity",
+                "scopeName": "source.telosys.entity",
+                "path": "./entity/entity-grammar.json"
+            },
+            {
+                "language": "telosys.vm",
+                "scopeName": "source.telosys.vm",
+                "path": "./vm/vm-grammar.json"
+            }
+        ],
+
+        "snippets": [
+            {
+                "language": "telosys.entity",
+                "path": "./entity/entity-snippet.json"
+            },
+            {
+                "language": "telosys.vm",
+                "path": "./vm/vm-snippet.json"
             }
         ]
     }
