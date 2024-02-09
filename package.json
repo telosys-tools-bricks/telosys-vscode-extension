@@ -4,9 +4,13 @@
     "description": "VSCode extension for Telosys entities and templates",
     "version": "4.1.0",
     "publisher": "TelosysTeam",
+    "repository": {
+       "type": "git",
+       "url": "https://github.com/telosys-tools-bricks/telosys-vscode-extension.git"
+    },    
     "engines": {
         "vscode": "^1.78.2"
-      },
+    },
     "icon": "img/telosysIcon.png",
     "categories": [
         "Programming Languages", "Snippets"
