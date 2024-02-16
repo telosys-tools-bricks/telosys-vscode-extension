@@ -1,7 +1,5 @@
-# Change Log
-All notable changes to the "telosys" extension will be documented in this file.
+# Telosys for Visual Studio Code Changelog
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-- Initial release
+## [Version 4.1]
+- 2024, Feb - Initial publication 
+- VSCode extension for Telosys version 4.1 
