@@ -1,10 +1,10 @@
 {
     "iconDefinitions": {
         "_entity_ext": {
-            "iconPath": "./file-light.svg"
+            "iconPath": "./ok/document.svg"
         },
         "_vm_ext": {
-            "iconPath": "./file-light.svg"
+            "iconPath": "./file-code-2xs.svg"
         },
         "_foo_bar_file": {
             "iconPath": "./file-light.svg"
