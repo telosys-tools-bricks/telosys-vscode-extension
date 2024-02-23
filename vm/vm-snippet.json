@@ -167,5 +167,33 @@
       "prefix": "#using",
       "body": "#using(\"$1\")",
       "description": "#using \n#using(\"var\") \n#using(\"var1\", \"var2\" ) \nTelosys directive\n"
+    },
+
+    "e.attributes": {
+      "prefix": "e.attributes",
+      "body": "\\$entity.attributes",
+      "description": "All attributes defined in the entity\n"
+    },
+    "e.attributesCount": {
+      "prefix": "e.attributesCount",
+      "body": "\\$entity.attributesCount",
+      "description": "Number of attributes defined in the entity\n"
+    },
+  
+    "a.entity": {
+      "prefix": "a.entity",
+      "body": "\\$attr.entity",
+      "description": "  \n"
+    },
+    "a.is": {
+      "prefix": "a.is",
+      "body": "\\$attr.${1|isBinaryType,isBooleanType,isByteType,isDatabaseNotNull,isDateType|}()$0",
+      "description": "   \n"
+    },
+    "a.name ": {
+      "prefix": "a.name ",
+      "body": "\\$attr.name ",
+      "description": "Attribute name\n"
     }
+  
   }
