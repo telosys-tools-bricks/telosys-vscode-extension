@@ -1,0 +1,26 @@
+{
+    "iconDefinitions": {
+        "_entity_ext": {
+            "iconPath": "./file-light.svg"
+        },
+        "_vm_ext": {
+            "iconPath": "./file-light.svg"
+        },
+        "_foo_bar_file": {
+            "iconPath": "./file-light.svg"
+        },
+        "_telosystools_folder": {
+            "iconPath": "./file-light.svg"
+        }
+    },
+    "fileExtensions": {
+        "entity": "_entity_ext",
+        "vm": "_vm_ext"
+    },
+    "fileNames": {
+        "foo.bar": "_foo_bar_file"
+    },
+    "folderNames": {
+        "TelosysTools": "_telosystools_folder"
+    }
+}

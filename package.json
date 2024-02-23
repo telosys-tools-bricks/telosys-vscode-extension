@@ -57,6 +57,14 @@
                 "language": "telosys.vm",
                 "path": "./vm/vm-snippet.json"
             }
-        ]
+        ],
+        
+        "iconThemes": [
+            {
+              "id": "telosys-icons",
+              "label": "Telosys icons",
+              "path": "./icons/telosys-icons.json"
+            }
+        ]        
     }
 }
