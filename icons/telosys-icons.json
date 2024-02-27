@@ -11,26 +11,48 @@
           "weight": "normal",
           "style": "normal",
           "size": "120%"
-        }
-      ],    
+        },
+        {
+            "id": "icofont",
+            "src": [
+              {
+                "path": "./icofont.woff",
+                "format": "woff"
+              }
+            ],
+            "weight": "normal",
+            "style": "normal",
+            "size": "120%"
+          }
+        ],    
     "iconDefinitions": {
-        "_entity_ext_font": {
-            "fontCharacter": "\\F0F6",
+        "_models_folder": {
+            "fontCharacter": "\\EEF8",
             "fontColor": "#5f8b3b",
-            "fontId": "my-font"
+            "fontId": "icofont"
+        },
+        "_model_yaml_file": {
+            "fontCharacter": "\\EEF8",
+            "fontColor": "#5f8b3b",
+            "fontId": "icofont"
         },
         "_entity_ext": {
-            "iconPath": "./ok/document.svg"
+            "fontCharacter": "\\EEF7",
+            "fontColor": "#5f8b3b",
+            "fontId": "icofont"
         },
 
-        "_vm_ext_font": {
-            "fontCharacter": "\\F0F6",
+        "_templates_folder": {
+            "fontCharacter": "\\E96E",
             "fontColor": "#bd8ae7",
-            "fontId": "my-font"
+            "fontId": "icofont"
         },
         "_vm_ext": {
-            "iconPath": "./file-code-2xs.svg"
+            "fontCharacter": "\\EB24",
+            "fontColor": "#bd8ae7",
+            "fontId": "icofont"
         },
+        
         "_readme_md_file": {
             "fontCharacter": "\\F02D",
             "fontColor": "#bd8ae7",
@@ -41,19 +63,32 @@
             "fontColor": "#bd8ae7",
             "fontId": "my-font"
         },
+
+        "_databases_yaml_file": {
+            "fontCharacter": "\\EEFF",
+            "fontColor": "#387ADF",
+            "fontId": "icofont"
+        },
+
         "_telosystools_folder": {
-            "iconPath": "./file-light.svg"
+            "fontCharacter": "\\EE2C",
+            "fontColor": "#387ADF",
+            "fontId": "icofont"
         }
     },
     "fileExtensions": {
-        "entity": "_entity_ext_font",
-        "vm": "_vm_ext_font"
+        "entity": "_entity_ext",
+        "vm": "_vm_ext"
     },
     "fileNames": {
+        "databases.yaml": "_databases_yaml_file",
+        "model.yaml":    "_model_yaml_file",
         "README.md":     "_readme_md_file",
         "templates.cfg": "_templates_cfg_file"
     },
     "folderNames": {
-        "TelosysTools": "_telosystools_folder"
+        "TelosysTools": "_telosystools_folder",
+        "models": "_models_folder",
+        "templates": "_templates_folder"
     }
 }

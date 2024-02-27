@@ -1,0 +1,59 @@
+{
+    "fonts": [
+        {
+          "id": "my-font",
+          "src": [
+            {
+              "path": "./fontawesome-webfont.woff",
+              "format": "woff"
+            }
+          ],
+          "weight": "normal",
+          "style": "normal",
+          "size": "120%"
+        }
+      ],    
+    "iconDefinitions": {
+        "_entity_ext_font": {
+            "fontCharacter": "\\F0F6",
+            "fontColor": "#5f8b3b",
+            "fontId": "my-font"
+        },
+        "_entity_ext": {
+            "iconPath": "./ok/document.svg"
+        },
+
+        "_vm_ext_font": {
+            "fontCharacter": "\\F0F6",
+            "fontColor": "#bd8ae7",
+            "fontId": "my-font"
+        },
+        "_vm_ext": {
+            "iconPath": "./file-code-2xs.svg"
+        },
+        "_readme_md_file": {
+            "fontCharacter": "\\F02D",
+            "fontColor": "#bd8ae7",
+            "fontId": "my-font"
+        },
+        "_templates_cfg_file": {
+            "fontCharacter": "\\F15C",
+            "fontColor": "#bd8ae7",
+            "fontId": "my-font"
+        },
+        "_telosystools_folder": {
+            "iconPath": "./file-light.svg"
+        }
+    },
+    "fileExtensions": {
+        "entity": "_entity_ext_font",
+        "vm": "_vm_ext_font"
+    },
+    "fileNames": {
+        "README.md":     "_readme_md_file",
+        "templates.cfg": "_templates_cfg_file"
+    },
+    "folderNames": {
+        "TelosysTools": "_telosystools_folder"
+    }
+}
