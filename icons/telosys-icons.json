@@ -1,18 +1,6 @@
 {
     "fonts": [
         {
-          "id": "my-font",
-          "src": [
-            {
-              "path": "./fontawesome-webfont.woff",
-              "format": "woff"
-            }
-          ],
-          "weight": "normal",
-          "style": "normal",
-          "size": "120%"
-        },
-        {
             "id": "icofont",
             "src": [
               {
@@ -23,21 +11,39 @@
             "weight": "normal",
             "style": "normal",
             "size": "120%"
+          },
+          {
+            "id": "icofont2",
+            "src": [
+              {
+                "path": "./icofont2.woff",
+                "format": "woff"
+              }
+            ],
+            "weight": "normal",
+            "style": "normal",
+            "size": "120%"
           }
         ],    
     "iconDefinitions": {
-        "_models_folder": {
-            "fontCharacter": "\\EEF8",
-            "fontColor": "#5f8b3b",
-            "fontId": "icofont"
+        "_downloads_folder": {
+            "fontCharacter": "\\EF08",
+            "fontColor": "#818FB4",
+            "fontId": "icofont2"
         },
-        "_model_yaml_file": {
+
+        "_models_folder": {
             "fontCharacter": "\\EEF8",
             "fontColor": "#5f8b3b",
             "fontId": "icofont"
         },
         "_entity_ext": {
             "fontCharacter": "\\EEF7",
+            "fontColor": "#5f8b3b",
+            "fontId": "icofont"
+        },
+        "_model_yaml_file": {
+            "fontCharacter": "\\EEF8",
             "fontColor": "#5f8b3b",
             "fontId": "icofont"
         },
@@ -52,20 +58,24 @@
             "fontColor": "#bd8ae7",
             "fontId": "icofont"
         },
+        "_templates_cfg_file": {
+            "fontCharacter": "\\E96E",
+            "fontColor": "#bd8ae7",
+            "fontId": "icofont"
+        },
         
         "_readme_md_file": {
-            "fontCharacter": "\\F02D",
-            "fontColor": "#bd8ae7",
-            "fontId": "my-font"
+            "fontCharacter": "\\EAD1",
+            "fontColor": "#818FB4",
+            "fontId": "icofont"
         },
-        "_templates_cfg_file": {
-            "fontCharacter": "\\F15C",
-            "fontColor": "#bd8ae7",
-            "fontId": "my-font"
-        },
-
         "_databases_yaml_file": {
             "fontCharacter": "\\EEFF",
+            "fontColor": "#387ADF",
+            "fontId": "icofont"
+        },
+        "_telosys-tools_cfg_file": {
+            "fontCharacter": "\\F014",
             "fontColor": "#387ADF",
             "fontId": "icofont"
         },
@@ -74,21 +84,56 @@
             "fontCharacter": "\\EE2C",
             "fontColor": "#387ADF",
             "fontId": "icofont"
+        },
+
+        "_default_file_icon": {
+            "fontCharacter": "\\EB12",
+            "fontColor": "#818FB4",
+            "fontId": "icofont"
+        },
+        "_default_folder_icon": {
+            "fontCharacter": "\\EF36",
+            "fontColor": "#818FB4",
+            "fontId": "icofont2"
+        },
+        "_default_folderexpanded_icon": {
+            "fontCharacter": "\\EC5B",
+            "fontColor": "#818FB4",
+            "fontId": "icofont2"
+        },
+
+        "_zip_ext": {
+            "fontCharacter": "\\EB30",
+            "fontColor": "#818FB4",
+            "fontId": "icofont"
         }
     },
+    "file": "_default_file_icon",
+    "folder": "_default_folder_icon",
+    "folderExpanded": "_default_folderexpanded_icon",
     "fileExtensions": {
         "entity": "_entity_ext",
-        "vm": "_vm_ext"
+        "vm": "_vm_ext",
+        "zip": "_zip_ext"
     },
     "fileNames": {
         "databases.yaml": "_databases_yaml_file",
+        "telosys-tools.cfg": "_telosys-tools_cfg_file",
         "model.yaml":    "_model_yaml_file",
         "README.md":     "_readme_md_file",
         "templates.cfg": "_templates_cfg_file"
     },
     "folderNames": {
         "TelosysTools": "_telosystools_folder",
+        "downloads" : "_downloads_folder",
+        "models": "_models_folder",
+        "templates": "_templates_folder"
+    },
+    "folderNamesExpanded": {
+        "TelosysTools": "_telosystools_folder",
+        "downloads" : "_downloads_folder",
         "models": "_models_folder",
         "templates": "_templates_folder"
     }
+
 }

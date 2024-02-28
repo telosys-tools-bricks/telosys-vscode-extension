@@ -1,0 +1,8 @@
+TODO / icons :
+- lib -> box (already in font)
+- variables.yaml file = "variables" --> file-excel ("X"), dollar 
+
+- .jar file  (?) -> jar
+- .java file (?) -> cup of tea 
+
+- .yaml file
