@@ -1,8 +1,8 @@
 {
     "name": "telosys-vscode",
     "displayName": "Telosys-VSCode",
-    "description": "VSCode extension for Telosys entities and templates",
-    "version": "4.1.0",
+    "description": "New VSCode extension for Telosys ver 4+",
+    "version": "4.1.1",
     "publisher": "telosys",
     "homepage": "https://www.telosys.org/",
     "repository": {

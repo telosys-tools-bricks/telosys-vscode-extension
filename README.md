@@ -1,7 +1,8 @@
-# Telosys for Visual Studio Code
+# Telosys for Visual Studio Code (NEW!)
 
-This extension provides syntax coloration and snippets for Telosys main files.  
-It supports Telosys version 4 and replaces the other extension.
+This extension provides syntax coloration, snippets and icons for Telosys.
+This is the **latest extension** supporting **Telosys ver 4**. 
+It replaces the other extension for version 3.
 
 ### Features for Telosys models
 - ".entity" files : syntax coloration 
@@ -11,6 +12,10 @@ It supports Telosys version 4 and replaces the other extension.
 - ".vm" files : syntax coloration 
 - ".vm" files : auto-completion based on snippets
 
+### Icons for all Telosys standard files and folders
+   
+   
+  
 ### For more information on Telosys  
 - [Telosys web site](https://www.telosys.org)  
 - [Telosys documentation](https://doc.telosys.org)  
