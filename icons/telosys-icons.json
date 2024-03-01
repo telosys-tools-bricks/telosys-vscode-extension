@@ -31,6 +31,11 @@
             "fontColor": "#818FB4",
             "fontId": "icofont2"
         },
+        "_lib_folder": {
+            "fontCharacter": "\\EEA5",
+            "fontColor": "#818FB4",
+            "fontId": "icofont"
+        },
 
         "_models_folder": {
             "fontCharacter": "\\EEF8",
@@ -41,6 +46,11 @@
             "fontCharacter": "\\EEF7",
             "fontColor": "#5f8b3b",
             "fontId": "icofont"
+        },
+        "_enum_ext": {
+            "fontCharacter": "\\EF74",
+            "fontColor": "#5f8b3b",
+            "fontId": "icofont2"
         },
         "_model_yaml_file": {
             "fontCharacter": "\\EEF8",
@@ -74,6 +84,11 @@
             "fontColor": "#387ADF",
             "fontId": "icofont"
         },
+        "_variables_yaml_file": {
+            "fontCharacter": "\\EE03", //   EDE5
+            "fontColor": "#387ADF",
+            "fontId": "icofont2" //   icofont
+        },
         "_telosys-tools_cfg_file": {
             "fontCharacter": "\\F014",
             "fontColor": "#387ADF",
@@ -106,6 +121,21 @@
             "fontCharacter": "\\EB30",
             "fontColor": "#818FB4",
             "fontId": "icofont"
+        },
+        "_txt_ext": {
+            "fontCharacter": "\\EB2A",
+            "fontColor": "#818FB4",
+            "fontId": "icofont"
+        },
+        "_java_ext": {
+            "fontCharacter": "\\EB99",
+            "fontColor": "#818FB4",
+            "fontId": "icofont2"
+        },
+        "_jar_ext": {
+            "fontCharacter": "\\EF55",
+            "fontColor": "#818FB4",
+            "fontId": "icofont2"
         }
     },
     "file": "_default_file_icon",
@@ -113,11 +143,16 @@
     "folderExpanded": "_default_folderexpanded_icon",
     "fileExtensions": {
         "entity": "_entity_ext",
+        "enum": "_enum_ext",
         "vm": "_vm_ext",
-        "zip": "_zip_ext"
+        "zip": "_zip_ext",
+        "txt": "_txt_ext",
+        "java": "_java_ext",
+        "jar": "_jar_ext"
     },
     "fileNames": {
         "databases.yaml": "_databases_yaml_file",
+        "variables.yaml": "_variables_yaml_file",
         "telosys-tools.cfg": "_telosys-tools_cfg_file",
         "model.yaml":    "_model_yaml_file",
         "README.md":     "_readme_md_file",
@@ -126,12 +161,14 @@
     "folderNames": {
         "TelosysTools": "_telosystools_folder",
         "downloads" : "_downloads_folder",
+        "lib" : "_lib_folder",
         "models": "_models_folder",
         "templates": "_templates_folder"
     },
     "folderNamesExpanded": {
         "TelosysTools": "_telosystools_folder",
         "downloads" : "_downloads_folder",
+        "lib" : "_lib_folder",
         "models": "_models_folder",
         "templates": "_templates_folder"
     }
