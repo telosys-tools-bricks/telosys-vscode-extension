@@ -367,7 +367,17 @@
 						"4": { "name": "keyword.other.telosys.vm" },
 						"5": { "name": "keyword.other.telosys.vm" }
 					}
-				}
+				},
+				{
+					"match": "(\\$env)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${env})",
+					"name": "keyword.other.telosys.vm"
+				}				
 			]
 		},
 		"project-object": {
@@ -380,7 +390,17 @@
 						"4": { "name": "keyword.other.telosys.vm" },
 						"5": { "name": "keyword.other.telosys.vm" }
 					}
-				}
+				},
+				{
+					"match": "(\\$project)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${project})",
+					"name": "keyword.other.telosys.vm"
+				}								
 			]
 		},
 		"target-object": {
@@ -402,6 +422,16 @@
 						"4": { "name": "keyword.other.telosys.vm" },
 						"5": { "name": "keyword.other.telosys.vm" }
 					}
+				},
+				{
+					"match": "(\\$target)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${target})",
+					"name": "keyword.other.telosys.vm"
 				}
 			]
 		},
@@ -415,7 +445,17 @@
 						"4": { "name": "keyword.other.telosys.vm" },
 						"5": { "name": "keyword.other.telosys.vm" }
 					}
-				}
+				},
+				{
+					"match": "(\\$bundle)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${bundle})",
+					"name": "keyword.other.telosys.vm"
+				}				
 			]
 		},
 		"generator-object": {
@@ -437,6 +477,16 @@
 						"4": { "name": "keyword.other.telosys.vm" },
 						"5": { "name": "keyword.other.telosys.vm" }
 					}
+				},
+				{
+					"match": "(\\$generator)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${generator})",
+					"name": "keyword.other.telosys.vm"
 				}
 			]
 		},
@@ -450,6 +500,16 @@
 						"4": { "name": "keyword.other.telosys.vm" },
 						"5": { "name": "keyword.other.telosys.vm" }
 					}
+				},
+				{
+					"match": "(\\$fn)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${fn})",
+					"name": "keyword.other.telosys.vm"
 				}
 			]
 		},
@@ -463,6 +523,16 @@
 						"4": { "name": "keyword.other.telosys.vm" },
 						"5": { "name": "keyword.other.telosys.vm" }
 					}
+				},
+				{
+					"match": "(\\$factory)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${factory})",
+					"name": "keyword.other.telosys.vm"
 				}
 			]
 		},
@@ -526,7 +596,17 @@
 						"4": { "name": "keyword.other.telosys.vm" },
 						"5": { "name": "keyword.other.telosys.vm" }
 					}
-				}
+				},
+				{
+					"match": "(\\$loader)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${loader})",
+					"name": "keyword.other.telosys.vm"
+				}				
 			]
 		},
 		"now-object": {
@@ -548,6 +628,16 @@
 						"4": { "name": "keyword.other.telosys.vm" },
 						"5": { "name": "keyword.other.telosys.vm" }
 					}
+				},
+				{
+					"match": "(\\$now)\\W",
+					"captures": {
+						"1": { "name": "keyword.other.telosys.vm" }
+					}
+				},
+				{
+					"match": "(\\${now})",
+					"name": "keyword.other.telosys.vm"
 				}
 			]
 		},
