@@ -85,9 +85,9 @@
             "fontId": "icofont"
         },
         "_variables_yaml_file": {
-            "fontCharacter": "\\EE03", //   EDE5
+            "fontCharacter": "\\EE03", 
             "fontColor": "#387ADF",
-            "fontId": "icofont2" //   icofont
+            "fontId": "icofont2"
         },
         "_telosys-tools_cfg_file": {
             "fontCharacter": "\\F014",
